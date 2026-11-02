@@ -4,22 +4,18 @@ import { cn } from "@/lib/utils";
 export function BrandMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true" className={cn("size-10", className)}>
-      <rect width="64" height="64" rx="18" fill="var(--surface-3)" stroke="var(--gold)" strokeOpacity="0.32" />
+      <rect width="64" height="64" rx="18" fill="#43a047" />
       <path
-        d="M16 47V31.5C16 22.9 23.2 16 32 16s16 6.9 16 15.5V47"
-        fill="none"
-        stroke="var(--gold)"
-        strokeWidth="3"
+        d="M20 44c0-12 10-22 24-22 0 12-10 22-24 22Z"
+        fill="#ffffff"
+      />
+      <path
+        d="M20 44c6-4 14-8 24-22"
+        stroke="#2e7d32"
+        strokeWidth="2.5"
         strokeLinecap="round"
       />
-      <path
-        d="M32 25.5c4.3 4.6 6.6 7.9 6.6 11.1a6.6 6.6 0 1 1-13.2 0c0-3.2 2.3-6.5 6.6-11.1Z"
-        fill="var(--gold)"
-      />
-      <path
-        d="M32 31.2c2.1 2.3 3.2 4 3.2 5.4a3.2 3.2 0 1 1-6.4 0c0-1.4 1.1-3.1 3.2-5.4Z"
-        fill="var(--espresso)"
-      />
+      <circle cx="25" cy="23" r="4" fill="#f5b61a" />
     </svg>
   );
 }

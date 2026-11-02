@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowUpRight, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, ShoppingBag, Leaf } from "lucide-react";
 import { ProductCard } from "@/components/store/product-card";
 import { Segmented } from "@/components/ui/segmented";
 import { categories, products } from "@/lib/catalog";
@@ -14,18 +14,19 @@ export function ProductGrid() {
   const visible = filter === "all" ? products : products.filter((product) => product.category === filter);
 
   return (
-    <section id="pantry" className="scroll-mt-24 border-y border-line bg-canvas-deep py-20 sm:py-24 lg:py-28">
+    <section id="products" className="scroll-mt-24 border-y border-[#0c2415]/10 bg-[#faf9f5] py-20 sm:py-24">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[600px]">
-            <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-gold">Shop the pantry</p>
-            <h2 className="mt-4 font-display text-[clamp(1.9rem,3.8vw,3rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-ink">
-              Take home
-              <span className="text-gold-gradient"> the good stuff.</span>
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5e9] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#2e7d32]">
+              <Leaf className="size-3.5" />
+              Organic Farm Pantry
+            </div>
+            <h2 className="mt-3 font-display text-[clamp(1.85rem,3.8vw,2.75rem)] font-bold tracking-tight text-[#0c2415]">
+              Farm Fresh Pure Dairy Products
             </h2>
-            <p className="mt-4 max-w-[480px] text-[13px] leading-relaxed text-ink-soft">
-              Choose your jar and weight — every order is packed the same morning it leaves the
-              dairy. Add to basket or order directly on WhatsApp.
+            <p className="mt-3 max-w-[480px] text-xs leading-relaxed text-[#385342]">
+              Every jar is hand-packed the same morning it leaves our Gujranwala dairy. Add to cart or order instantly on WhatsApp.
             </p>
           </div>
           <Segmented
@@ -34,7 +35,7 @@ export function ProductGrid() {
             value={filter}
             onChange={setFilter}
             size="sm"
-            className="self-start border-line bg-surface md:self-auto"
+            className="self-start border-[#0c2415]/15 bg-white md:self-auto"
           />
         </div>
 

@@ -1,153 +1,102 @@
-import { Clock, MessageCircle, Phone, Plus } from "lucide-react";
-import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
-import { supportWhatsAppMessage, whatsappLink } from "@/lib/whatsapp";
+"use client";
+
+import { useState } from "react";
+import { ChevronDown, Plus, Minus, Award, Leaf } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 const faqs = [
   {
-    question: "How do I know the ghee is actually pure?",
-    answer:
-      "Every batch is screened for palm oil, starch and moisture, and carries a batch card with a lab reference. If you ever doubt a jar, message us with the batch number and we'll share the report — or replace it, no questions asked.",
+    q: "What farm and dairy services do you provide?",
+    a: "We provide 100% pure raw buffalo and cow milk delivery, artisanal slow-churned desi ghee in copper cauldrons, fresh white makhan, khoya, raw sidr honey, and seasonal organic farm produce.",
   },
   {
-    question: "Which areas do you deliver to?",
-    answer:
-      "We deliver across Gujranwala — Satellite Town, Model Town, DC Colony, Peoples Colony, Cantt, Wapda Town and nearby areas. Orders placed before 3 pm usually arrive the same evening. Orders above Rs 3,000 are delivered free.",
+    q: "Where does your milk and desi ghee come from?",
+    a: "All milk is collected exclusively from our own and trusted partner herds in Gujranwala. Herds graze freely on green pasture and organic fodder with zero hormones or industrial feed.",
   },
   {
-    question: "How is the fresh dairy kept cold?",
-    answer:
-      "Cream, dahi, khoya and butter travel in insulated bags with ice packs, and are delivered within 24 hours of packing. Pop them straight into the fridge when they arrive.",
+    q: "How does the daily morning subscription work?",
+    a: "You select your daily liter requirement and morning delivery slot. Our refrigerated vans deliver fresh milk chilled to your doorstep every morning before 7:00 AM.",
   },
   {
-    question: "What payment methods can I use?",
-    answer:
-      "Cash on delivery is always available. You can also pay by Easypaisa, JazzCash or bank transfer after we confirm your order on WhatsApp.",
+    q: "Do you deliver organic vegetables and sidr honey?",
+    a: "Yes! In addition to dairy, we harvest seasonal pesticide-free vegetables and collect single-origin wild sidr honey from our natural farm apiaries.",
   },
   {
-    question: "Can I order directly on WhatsApp?",
-    answer:
-      "Yes — add items to your basket and tap 'Order on WhatsApp', or message us directly. We'll confirm stock, total and a delivery window before dispatch.",
-  },
-  {
-    question: "What if I'm not happy with an order?",
-    answer:
-      "Tell us within 24 hours and we'll replace the item or refund you. Freshness is personal for us; a bad jar reflects on the whole dairy.",
+    q: "Can we visit your organic farm in Gujranwala?",
+    a: "Yes, we welcome families and farm enthusiasts! Contact us on WhatsApp to schedule an educational tour of our pastures, milking stations, and traditional ghee kitchens.",
   },
 ];
 
 export function FaqSection() {
+  const [openIdx, setOpenIdx] = useState<number | null>(0);
+
   return (
-    <section id="faq" className="relative scroll-mt-24 overflow-hidden border-y border-line bg-surface/40 py-20 sm:py-24 lg:py-28">
-      <div className="pattern-dots pointer-events-none absolute inset-0 opacity-[0.12] [mask-image:radial-gradient(70%_70%_at_20%_50%,black,transparent)]" />
+    <section id="faq" className="relative scroll-mt-20 bg-white py-20 sm:py-24">
+      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
+          
+          {/* Left: Green Box with Framed Farmer Photo + Yellow Badge */}
+          <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
+            <div className="relative rounded-3xl bg-[#0c2415] p-6 sm:p-8">
+              <div className="relative aspect-[4/4.5] overflow-hidden rounded-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=800&q=80"
+                  alt="Farmer standing proudly in cornfield"
+                  loading="lazy"
+                  className="size-full object-cover object-center"
+                />
+              </div>
 
-      <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-        <div className="max-w-[620px]">
-          <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-gold">Need a hand?</p>
-          <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-ink">
-            How can we
-            <span className="text-gold-gradient"> help you?</span>
-          </h2>
-          <p className="mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-ink-soft">
-            Real answers from the family that makes your dairy — not a call centre. Ask us anything
-            about a batch, a delivery or a recipe.
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-5 lg:grid-cols-[0.78fr_1.22fr] lg:gap-6">
-          <aside className="relative flex flex-col overflow-hidden rounded-[2rem] border border-line bg-surface">
-            <div className="relative aspect-[4/3] overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/farmer-smiling.jpg"
-                alt="A Malik Dairy farmer in the field"
-                loading="lazy"
-                className="absolute inset-0 size-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-espresso via-espresso/10 to-transparent" />
-              <span className="absolute left-4 top-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-espresso/60 px-3 py-1.5 text-[8.5px] font-bold uppercase tracking-[0.16em] text-cream/90 backdrop-blur-md">
-                <span className="size-1.5 rounded-full bg-success" />
-                Replies in minutes
-              </span>
-              <div className="absolute inset-x-5 bottom-4">
-                <p className="text-[8.5px] font-extrabold uppercase tracking-[0.18em] text-gold">
-                  Talk to the farmer
-                </p>
-                <p className="mt-1.5 font-display text-[1.25rem] font-semibold leading-tight text-cream">
-                  Bilal Malik
+              {/* Floating Yellow Badge */}
+              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 flex w-[85%] max-w-[300px] items-center gap-3 rounded-2xl bg-[#f5b61a] p-4 text-[#0c2415] shadow-2xl">
+                <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#0c2415] text-[#f5b61a]">
+                  <Award className="size-5" />
+                </span>
+                <p className="text-xs font-bold leading-tight">
+                  25+ Years of Organic Agriculture &amp; Pure Dairy
                 </p>
               </div>
-            </div>
-
-            <div className="flex flex-1 flex-col p-5">
-              <p className="text-[11.5px] leading-relaxed text-ink-soft">
-                Third-generation dairy farmer. If you have a question about purity, delivery or
-                which jar to start with, message us directly.
-              </p>
-
-              <a
-                href={whatsappLink(supportWhatsAppMessage())}
-                target="_blank"
-                rel="noreferrer"
-                className="mt-5 inline-flex h-11 items-center justify-center gap-2 rounded-full bg-wa text-xs font-extrabold text-white transition hover:brightness-105 active:scale-[0.99]"
-              >
-                <WhatsAppIcon className="size-4" />
-                Chat on WhatsApp
-              </a>
-
-              <a
-                href="tel:+923001234567"
-                className="mt-2.5 inline-flex h-11 items-center justify-center gap-2 rounded-full border border-line bg-surface-2 text-xs font-bold text-ink transition hover:border-gold/40"
-              >
-                <Phone className="size-3.5 text-gold" />
-                +92 300 1234567
-              </a>
-
-              <div className="mt-auto flex items-center gap-2 border-t border-line pt-4 text-[10px] text-ink-faint">
-                <Clock className="size-3.5 text-gold" />
-                Daily · 7:00 am – 10:00 pm
-              </div>
-            </div>
-          </aside>
-
-          <div className="rounded-[1.7rem] border border-line bg-surface/70 px-5 sm:px-6">
-            {faqs.map((faq, index) => (
-              <details
-                key={faq.question}
-                className="group border-b border-line last:border-b-0"
-                open={index === 0}
-              >
-                <summary className="flex cursor-pointer list-none items-start justify-between gap-4 py-5 text-left">
-                  <span className="flex gap-3 text-[12.5px] font-bold leading-snug text-ink">
-                    <span className="mt-0.5 font-mono text-[10px] font-normal text-gold/70">
-                      0{index + 1}
-                    </span>
-                    {faq.question}
-                  </span>
-                  <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full border border-line text-ink-soft transition group-open:rotate-45 group-open:border-gold/40 group-open:bg-gold group-open:text-espresso">
-                    <Plus className="size-3.5" />
-                  </span>
-                </summary>
-                <p className="max-w-[620px] pb-5 pl-7 pr-6 text-[11.5px] leading-relaxed text-ink-soft">
-                  {faq.answer}
-                </p>
-              </details>
-            ))}
-
-            <div className="flex flex-wrap items-center justify-between gap-3 border-t border-line py-4 text-[10.5px] text-ink-faint">
-              <span className="inline-flex items-center gap-2">
-                <MessageCircle className="size-3.5 text-gold" />
-                Still unsure? We reply on WhatsApp within minutes.
-              </span>
-              <a
-                href={whatsappLink(supportWhatsAppMessage())}
-                target="_blank"
-                rel="noreferrer"
-                className="font-bold text-gold-strong hover:underline"
-              >
-                Ask a question
-              </a>
             </div>
           </div>
+
+          {/* Right: FAQ Accordions */}
+          <div className="rounded-3xl bg-[#faf8f4] p-8 sm:p-10 border border-[#0c2415]/10">
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5e9] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#2e7d32]">
+              <Leaf className="size-3.5" />
+              FAQ Questions
+            </div>
+
+            <h2 className="mt-4 font-display text-[clamp(1.85rem,3.8vw,2.75rem)] font-bold tracking-tight text-[#0c2415]">
+              How Can We Help You?
+            </h2>
+
+            <div className="mt-8 divide-y divide-[#0c2415]/10">
+              {faqs.map((faq, idx) => {
+                const isOpen = openIdx === idx;
+                return (
+                  <div key={idx} className="py-4">
+                    <button
+                      type="button"
+                      onClick={() => setOpenIdx(isOpen ? null : idx)}
+                      className="flex w-full items-center justify-between gap-4 text-left font-display text-sm font-bold text-[#0c2415] transition hover:text-[#43a047]"
+                    >
+                      <span>{faq.q}</span>
+                      <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#e8f5e9] text-[#2e7d32]">
+                        {isOpen ? <Minus className="size-3.5" /> : <Plus className="size-3.5" />}
+                      </span>
+                    </button>
+                    {isOpen ? (
+                      <p className="mt-3 text-xs leading-relaxed text-[#385342]">
+                        {faq.a}
+                      </p>
+                    ) : null}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
       </div>
     </section>

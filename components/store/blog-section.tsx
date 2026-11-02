@@ -1,129 +1,115 @@
-import { ArrowUpRight, CalendarDays, Clock } from "lucide-react";
-import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { ArrowRight, Calendar, Leaf } from "lucide-react";
 
 const articles = [
   {
-    category: "Craft",
-    title: "The quiet art of slow ghee",
-    excerpt:
-      "Why we still simmer cultured butter in copper for hours — and what that patience does to the flavour.",
-    read: "5 min read",
-    date: "12 Oct 2026",
-    image: "/products/ghee.svg",
-    photo: false,
-    tint: "radial-gradient(120% 120% at 30% 18%, #FCF3DD 0%, #F4E1B8 52%, #E8CD92 100%)",
+    image: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=600&q=80",
+    date: "Oct 24, 2026",
+    title: "How Slow-Churned Copper Desi Ghee Nourishes Your Body",
   },
   {
-    category: "From the hive",
-    title: "Why winter honey crystallises",
-    excerpt:
-      "Those soft grains are not a flaw. Here is what real, raw sidr honey does when the temperature drops.",
-    read: "4 min read",
-    date: "28 Sep 2026",
-    image: "/products/honey.svg",
-    photo: false,
-    tint: "radial-gradient(120% 120% at 30% 18%, #FCF0D4 0%, #F6DDA7 52%, #EBC47C 100%)",
+    image: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=600&q=80",
+    date: "Oct 18, 2026",
+    title: "Grass-Fed vs Industrial Feed: Why It Matters for Milk",
   },
   {
-    category: "Farm notes",
-    title: "A morning on the Malik farm",
-    excerpt:
-      "Before sunrise, the sheds are awake. A short walk through the fields, the herds and the first churn of the day.",
-    read: "6 min read",
-    date: "05 Sep 2026",
-    image: "/images/farm-field.jpg",
-    photo: true,
-    tint: "",
+    image: "https://images.unsplash.com/photo-1592417817098-8f3d69104a47?auto=format&fit=crop&w=600&q=80",
+    date: "Oct 12, 2026",
+    title: "Organic Soil Enrichment: Cultivating Clean Punjab Pastures",
+  },
+  {
+    image: "https://images.unsplash.com/photo-1594488518001-447a1bf64c58?auto=format&fit=crop&w=600&q=80",
+    date: "Oct 05, 2026",
+    title: "From Dawn To Doorstep: A Morning Inside Malik Dairy",
   },
 ];
 
 export function BlogSection() {
   return (
-    <section id="journal" className="scroll-mt-24 border-t border-line bg-canvas-deep py-20 sm:py-24 lg:py-28">
+    <section id="blog" className="relative scroll-mt-20 bg-white py-20 sm:py-24">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-[600px]">
-            <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-gold">The dairy journal</p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-ink">
-              Notes, recipes
-              <span className="text-gold-gradient"> & harvest stories.</span>
-            </h2>
-            <p className="mt-4 max-w-[480px] text-[13.5px] leading-relaxed text-ink-soft">
-              Slow craft, seasonal cooking and the small things we notice on the farm.
-            </p>
+        
+        {/* Header */}
+        <div className="text-center">
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5e9] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#2e7d32]">
+            <Leaf className="size-3.5" />
+            Our Blog
           </div>
-          <span className="inline-flex items-center gap-2 self-start rounded-full border border-line bg-surface/70 px-4 py-2 text-[9.5px] font-bold uppercase tracking-[0.14em] text-ink-faint md:self-auto">
-            <CalendarDays className="size-3.5 text-gold" />
-            Fresh from the dairy
-          </span>
+          <h2 className="mt-4 font-display text-[clamp(1.85rem,3.8vw,2.75rem)] font-bold tracking-tight text-[#0c2415]">
+            Our Blog &amp; Articles
+          </h2>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3 lg:gap-5">
-          {articles.map((article) => (
-            <article
-              key={article.title}
-              className="group flex flex-col overflow-hidden rounded-[1.7rem] border border-line bg-surface/70 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-lift"
-            >
-              <div
-                className="relative aspect-[16/10] overflow-hidden"
-                style={article.photo ? undefined : { background: article.tint }}
-              >
-                {article.photo ? (
-                  <>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      loading="lazy"
-                      className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-espresso/65 via-transparent to-transparent" />
-                  </>
-                ) : (
-                  <>
-                    <div className="pattern-dots absolute inset-0 opacity-[0.15]" />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={article.image}
-                      alt={article.title}
-                      loading="lazy"
-                      className="absolute inset-0 size-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
-                  </>
-                )}
-                <span
-                  className={cn(
-                    "absolute left-3 top-3 rounded-full px-2.5 py-1 text-[8px] font-extrabold uppercase tracking-[0.12em] backdrop-blur",
-                    article.photo
-                      ? "bg-espresso/65 text-cream/85"
-                      : "bg-espresso/80 text-gold",
-                  )}
-                >
-                  {article.category}
-                </span>
-              </div>
+        {/* Magazine Grid */}
+        <div className="mt-12 grid gap-6 lg:grid-cols-12">
+          
+          {/* Left: 1 Large Featured Post (5 columns) */}
+          <div className="lg:col-span-5">
+            <article className="group relative flex h-full min-h-[420px] flex-col justify-end overflow-hidden rounded-3xl bg-[#0c2415] p-7 text-white shadow-md transition duration-300 hover:shadow-2xl">
+              {/* Image */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="https://images.unsplash.com/photo-1527842891421-42eec6e703ea?auto=format&fit=crop&w=800&q=80"
+                alt="Farmer in straw hat inspecting harvest"
+                loading="lazy"
+                className="absolute inset-0 size-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c2415]/95 via-[#0c2415]/40 to-transparent" />
 
-              <div className="flex flex-1 flex-col p-5">
-                <div className="flex items-center gap-3 text-[9px] font-bold uppercase tracking-[0.12em] text-ink-faint">
-                  <span>{article.date}</span>
-                  <span className="h-2.5 w-px bg-line-strong" />
-                  <span className="inline-flex items-center gap-1">
-                    <Clock className="size-2.5" />
-                    {article.read}
-                  </span>
-                </div>
-                <h3 className="mt-3 font-display text-[1.1rem] font-semibold leading-snug tracking-[-0.01em] text-ink">
-                  {article.title}
-                </h3>
-                <p className="mt-2 flex-1 text-[11.5px] leading-relaxed text-ink-soft">{article.excerpt}</p>
-                <span className="mt-5 inline-flex items-center gap-1 text-[9.5px] font-bold uppercase tracking-[0.14em] text-gold transition group-hover:gap-2">
-                  Read the story
-                  <ArrowUpRight className="size-3.5" />
+              <div className="relative">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-[#43a047] px-3 py-1 text-[11px] font-bold text-white">
+                  <Calendar className="size-3" />
+                  Oct 28, 2026
                 </span>
+                <h3 className="mt-3 font-display text-xl font-bold leading-tight text-white group-hover:text-[#f5b61a]">
+                  The Benefits Of Eating Pure Organic Produce &amp; Raw Dairy Every Day
+                </h3>
+                <p className="mt-2 text-xs leading-relaxed text-white/75">
+                  Discover how unpasteurized organic milk and slow-simmered desi ghee protect gut microflora and deliver bio-available vitamins.
+                </p>
+                <div className="mt-4 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#81c784] group-hover:text-white">
+                  Read Full Article
+                  <ArrowRight className="size-3.5" />
+                </div>
               </div>
             </article>
-          ))}
+          </div>
+
+          {/* Right: 2x2 Grid of 4 Smaller Cards (7 columns) */}
+          <div className="grid gap-6 sm:grid-cols-2 lg:col-span-7">
+            {articles.map((item, idx) => (
+              <article
+                key={idx}
+                className="group overflow-hidden rounded-3xl border border-[#0c2415]/10 bg-[#fbfbfa] shadow-sm transition duration-300 hover:border-[#43a047] hover:bg-white hover:shadow-md"
+              >
+                <div className="relative aspect-[16/10] overflow-hidden bg-[#0c2415]/10">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    loading="lazy"
+                    className="size-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+                <div className="p-5">
+                  <span className="flex items-center gap-1.5 text-[11px] font-semibold text-[#385342]">
+                    <Calendar className="size-3 text-[#43a047]" />
+                    {item.date}
+                  </span>
+                  <h3 className="mt-2 font-display text-sm font-bold leading-snug text-[#0c2415] transition group-hover:text-[#43a047]">
+                    {item.title}
+                  </h3>
+                  <div className="mt-3 flex items-center gap-1 text-xs font-bold text-[#43a047]">
+                    <span>Read More</span>
+                    <ArrowRight className="size-3 transition duration-200 group-hover:translate-x-1" />
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
         </div>
+
       </div>
     </section>
   );

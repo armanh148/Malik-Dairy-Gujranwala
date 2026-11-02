@@ -1,163 +1,107 @@
 import Link from "next/link";
-import { ArrowUpRight, Sparkles } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowRight, ChevronLeft, ChevronRight, Leaf } from "lucide-react";
 
-type Category = {
-  number: string;
-  title: string;
-  eyebrow: string;
-  description: string;
-  images: { src: string; alt: string }[];
-  tags: string[];
-  from: string;
-  tint: string;
-};
-
-const categories: Category[] = [
+const services = [
   {
-    number: "01",
-    title: "Pure Desi Ghee",
-    eyebrow: "The signature",
-    description:
-      "Cultured desi milk, hand-churned into makhan and simmered slowly in copper until it turns clear and golden.",
-    images: [{ src: "/products/ghee.svg", alt: "Pure desi ghee jar" }],
-    tags: ["500 g", "1 kg", "No palm oil"],
-    from: "Rs 2,450",
-    tint: "radial-gradient(120% 120% at 30% 18%, #FCF3DD 0%, #F4E1B8 52%, #E8CD92 100%)",
+    image: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80",
+    tag: "Services Details",
+    title: "Agriculture Products",
+    description: "Fresh organic seasonal vegetables, pure cold-pressed oils, and natural farm harvest grown without harmful synthetic pesticides.",
+    href: "/#products",
   },
   {
-    number: "02",
-    title: "Fresh Butter",
-    eyebrow: "Churned daily",
-    description:
-      "Soft, bright white butter made every morning from the previous night's cream. Salted just enough, never overworked.",
-    images: [{ src: "/products/butter.svg", alt: "Fresh hand-churned white butter" }],
-    tags: ["250 g", "500 g", "Pure rock salt"],
-    from: "Rs 950",
-    tint: "radial-gradient(120% 120% at 30% 18%, #FDF8EB 0%, #F3E6C9 54%, #E5D2A8 100%)",
+    image: "https://images.unsplash.com/photo-1592417817098-8f3d69104a47?auto=format&fit=crop&w=800&q=80",
+    tag: "Services Details",
+    title: "Crops Cultivation",
+    description: "Sustainably cultivated green pastures, chemical-free organic soil enrichment, and nutrient-dense fodder for cattle wellness.",
+    href: "/#about",
   },
   {
-    number: "03",
-    title: "Honey & Khoya",
-    eyebrow: "The seasonal pair",
-    description:
-      "Raw single-origin sidr honey beside fresh whole-milk khoya — two slow crafts, made for winter kitchens and Eid mornings.",
-    images: [
-      { src: "/products/honey.svg", alt: "Raw sidr honey jar" },
-      { src: "/products/khoya.svg", alt: "Fresh khoya in a clay bowl" },
-    ],
-    tags: ["Raw honey", "Fresh mawa", "Small batch"],
-    from: "Rs 1,100",
-    tint: "radial-gradient(120% 120% at 30% 18%, #FCF0D4 0%, #F6DDA7 52%, #EBC47C 100%)",
+    image: "https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&w=800&q=80",
+    tag: "Services Details",
+    title: "Dairy Production",
+    description: "Pure whole milk, slow-churned artisanal desi ghee in copper vessels, fresh handmade white butter, and traditional khoya.",
+    href: "/#products",
   },
 ];
 
 export function ProductCategories() {
   return (
-    <section id="products" className="relative scroll-mt-24 overflow-hidden bg-canvas py-20 sm:py-24 lg:py-28">
-      <div className="pattern-dots pointer-events-none absolute inset-0 opacity-[0.18] [mask-image:radial-gradient(75%_70%_at_50%_0%,black,transparent)]" />
-
-      <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-[620px]">
-            <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-gold">Core offerings</p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-ink">
-              Three things we do
-              <span className="text-gold-gradient"> properly.</span>
+    <section id="services" className="relative scroll-mt-20 bg-white py-20 sm:py-24">
+      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5e9] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#2e7d32]">
+              <Leaf className="size-3.5" />
+              What We Offer
+            </div>
+            <h2 className="mt-3 font-display text-[clamp(1.85rem,3.8vw,2.75rem)] font-bold tracking-tight text-[#0c2415]">
+              We Offers Eco &amp; Agriculture Services
             </h2>
-            <p className="mt-4 max-w-[500px] text-[13.5px] leading-relaxed text-ink-soft">
-              Small batches, old methods and ingredients we can name. This is the heart of the Malik
-              Dairy pantry.
-            </p>
           </div>
-          <Link
-            href="/#pantry"
-            className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-gold-strong transition hover:text-gold"
-          >
-            Shop all jars
-            <ArrowUpRight className="size-3.5" />
-          </Link>
+
+          {/* Navigation Arrows */}
+          <div className="hidden items-center gap-2 sm:flex">
+            <button
+              type="button"
+              className="grid size-11 place-items-center rounded-full border border-[#0c2415]/15 bg-white text-[#0c2415] transition hover:bg-[#e8f5e9] hover:text-[#2e7d32]"
+              aria-label="Previous service"
+            >
+              <ChevronLeft className="size-5" />
+            </button>
+            <button
+              type="button"
+              className="grid size-11 place-items-center rounded-full bg-[#43a047] text-white shadow-md transition hover:bg-[#388e3c]"
+              aria-label="Next service"
+            >
+              <ChevronRight className="size-5" />
+            </button>
+          </div>
         </div>
 
-        <div className="mt-10 grid gap-4 md:grid-cols-3 lg:gap-5">
-          {categories.map((category) => (
+        {/* 3 Green Service Cards */}
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {services.map((item) => (
             <article
-              key={category.title}
-              className="group relative overflow-hidden rounded-[2rem] border border-success/15 bg-surface-2 p-2.5 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-lift"
+              key={item.title}
+              className="group flex flex-col overflow-hidden rounded-3xl border border-[#0c2415]/10 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div
-                className={cn(
-                  "relative overflow-hidden rounded-[1.55rem]",
-                  category.images.length > 1 ? "aspect-[4/3]" : "aspect-[4/3]",
-                )}
-                style={{ background: category.tint }}
-              >
-                <div className="pattern-dots absolute inset-0 opacity-[0.15]" />
-                {category.images.length > 1 ? (
-                  <div className="grid h-full grid-cols-2 gap-1.5 p-2">
-                    {category.images.map((image) => (
-                      <div key={image.src} className="relative overflow-hidden rounded-2xl bg-white/20">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={image.src}
-                          alt={image.alt}
-                          loading="lazy"
-                          className="absolute inset-0 size-full object-contain p-2 transition-transform duration-500 group-hover:scale-[1.04]"
-                        />
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  /* eslint-disable-next-line @next/next/no-img-element */
-                  <img
-                    src={category.images[0].src}
-                    alt={category.images[0].alt}
-                    loading="lazy"
-                    className="absolute inset-0 size-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
-                )}
-                <span className="absolute left-3 top-3 grid size-8 place-items-center rounded-full bg-espresso/80 text-[10px] font-extrabold text-gold backdrop-blur">
-                  {category.number}
-                </span>
-                <span className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-espresso/80 px-2.5 py-1 text-[8px] font-bold uppercase tracking-[0.12em] text-cream/80 backdrop-blur">
-                  <Sparkles className="size-2.5 text-gold" />
-                  {category.eyebrow}
-                </span>
+              {/* Card Image */}
+              <div className="relative aspect-[16/11] overflow-hidden bg-[#0c2415]/5">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  loading="lazy"
+                  className="size-full object-cover transition duration-500 group-hover:scale-105"
+                />
               </div>
 
-              <div className="px-3 pb-3 pt-5">
-                <h3 className="font-display text-[1.25rem] font-semibold tracking-[-0.02em] text-ink">
-                  {category.title}
-                </h3>
-                <p className="mt-2 min-h-[52px] text-[11.5px] leading-relaxed text-ink-soft">
-                  {category.description}
-                </p>
-
-                <div className="mt-4 flex flex-wrap gap-1.5">
-                  {category.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full border border-success/20 bg-success-soft/60 px-2.5 py-1 text-[9px] font-bold uppercase tracking-[0.08em] text-sage"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+              {/* Card Body - Deep Forest Green */}
+              <div className="flex flex-1 flex-col justify-between bg-[#0e3b1f] p-7 text-white">
+                <div>
+                  <span className="inline-block rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold text-[#81c784]">
+                    {item.tag}
+                  </span>
+                  <h3 className="mt-3 font-display text-xl font-bold tracking-tight text-white group-hover:text-[#f5b61a]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-xs leading-relaxed text-white/75">
+                    {item.description}
+                  </p>
                 </div>
 
-                <div className="mt-5 flex items-end justify-between gap-3 border-t border-line pt-4">
-                  <div>
-                    <p className="text-[8.5px] font-bold uppercase tracking-[0.14em] text-ink-faint">From</p>
-                    <p className="mt-1 font-display text-[1.15rem] font-semibold leading-none text-ink">
-                      {category.from}
-                    </p>
-                  </div>
+                <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
                   <Link
-                    href="/#pantry"
-                    className="inline-flex h-9 items-center gap-1.5 rounded-full bg-gold px-3.5 text-[10.5px] font-extrabold text-espresso transition hover:bg-gold-strong"
+                    href={item.href}
+                    className="text-xs font-bold uppercase tracking-wider text-white transition hover:text-[#f5b61a]"
                   >
-                    Explore
-                    <ArrowUpRight className="size-3.5" />
+                    Read More
                   </Link>
+                  <span className="grid size-9 place-items-center rounded-full bg-[#43a047] text-white shadow-sm transition group-hover:bg-[#f5b61a] group-hover:text-[#0c2415]">
+                    <ArrowRight className="size-4" />
+                  </span>
                 </div>
               </div>
             </article>

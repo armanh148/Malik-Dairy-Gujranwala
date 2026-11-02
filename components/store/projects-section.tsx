@@ -1,129 +1,93 @@
-import { ArrowUpRight, Clock } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowRight, Leaf } from "lucide-react";
 
-const harvests = [
+const projects = [
   {
-    number: "01",
-    tag: "In the fields",
-    title: "The morning round",
-    text: "Our herds move to fresh pasture at first light. Open grazing, seasonal feed, no shortcuts.",
-    image: "/images/hero-tractor.jpg",
-    photo: true,
-    tint: "",
+    image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=700&q=80",
+    title: "Agriculture Products",
+    subtitle: "Organic Greenhouse",
   },
   {
-    number: "02",
-    tag: "Batch 0142",
-    title: "Hand-churned butter",
-    text: "Last night's cream meets the wooden churn at 4:30 am. Soft, bright and lightly salted.",
-    image: "/products/butter.svg",
-    photo: false,
-    tint: "radial-gradient(120% 120% at 30% 18%, #FDF8EB 0%, #F3E6C9 54%, #E5D2A8 100%)",
+    image: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?auto=format&fit=crop&w=700&q=80",
+    title: "Fresh Fruit & Veg",
+    subtitle: "Natural Nursery",
   },
   {
-    number: "03",
-    tag: "Copper & flame",
-    title: "Ghee, slowed down",
-    text: "Butter simmers low for hours until the milk solids turn golden and the kitchen smells like home.",
-    image: "/products/ghee.svg",
-    photo: false,
-    tint: "radial-gradient(120% 120% at 30% 18%, #FCF3DD 0%, #F4E1B8 52%, #E8CD92 100%)",
+    image: "https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=700&q=80",
+    title: "Crops & Pure Dairy",
+    subtitle: "Open Pastures",
   },
   {
-    number: "04",
-    tag: "Ready to leave",
-    title: "Sealed with care",
-    text: "Glass jars are filled warm, labelled by hand and chilled for the same-day Gujranwala route.",
-    image: "/images/farmer-smiling.jpg",
-    photo: true,
-    tint: "",
+    image: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=700&q=80",
+    title: "Farming Solutions",
+    subtitle: "Eco Soil Testing",
   },
 ];
 
 export function ProjectsSection() {
   return (
-    <section className="relative overflow-hidden border-y border-line bg-canvas-deep py-20 sm:py-24 lg:py-28">
-      <div className="pattern-grid pointer-events-none absolute inset-0 opacity-[0.2] [mask-image:radial-gradient(75%_65%_at_50%_0%,black,transparent)]" />
-
-      <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="max-w-[620px]">
-            <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-gold">Recent harvest</p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-ink">
-              Inside the dairy,
-              <span className="text-gold-gradient"> this week.</span>
+    <section id="projects" className="relative scroll-mt-20 bg-[#f8f8f5] py-20 sm:py-24">
+      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+        
+        {/* Header */}
+        <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
+          <div>
+            <div className="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5e9] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#2e7d32]">
+              <Leaf className="size-3.5" />
+              Latest Projects
+            </div>
+            <h2 className="mt-3 font-display text-[clamp(1.85rem,3.8vw,2.75rem)] font-bold tracking-tight text-[#0c2415]">
+              Recently Completed Project
             </h2>
-            <p className="mt-4 max-w-[500px] text-[13.5px] leading-relaxed text-ink-soft">
-              From the first pasture round to the last sealed jar — a look at the batches leaving our
-              dairy right now.
-            </p>
           </div>
-          <span className="inline-flex items-center gap-2 self-start rounded-full border border-line bg-surface/70 px-4 py-2 text-[9.5px] font-bold uppercase tracking-[0.14em] text-ink-faint md:self-auto">
-            <Clock className="size-3.5 text-gold" />
-            Updated every morning
-          </span>
+          <p className="max-w-[460px] text-xs leading-relaxed text-[#385342]">
+            Explore our recent organic field harvests, automated hygienic dairy pipelines, and sustainable crop cycles in Gujranwala.
+          </p>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-4">
-          {harvests.map((item) => (
-            <article
-              key={item.number}
-              className="group flex flex-col overflow-hidden rounded-[1.6rem] border border-line bg-surface/70 transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:shadow-lift"
+        {/* 4 Tall Gallery Cards */}
+        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {projects.map((item, idx) => (
+            <div
+              key={idx}
+              className="group relative aspect-[3/4.4] overflow-hidden rounded-3xl bg-[#0c2415]/10 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
             >
-              <div
-                className="relative aspect-[4/3] overflow-hidden"
-                style={item.photo ? undefined : { background: item.tint }}
-              >
-                {item.photo ? (
-                  <>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      loading="lazy"
-                      className="absolute inset-0 size-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-espresso/75 via-transparent to-transparent" />
-                  </>
-                ) : (
-                  <>
-                    <div className="pattern-dots absolute inset-0 opacity-[0.15]" />
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      loading="lazy"
-                      className="absolute inset-0 size-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.04]"
-                    />
-                  </>
-                )}
+              {/* Image */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={item.image}
+                alt={item.title}
+                loading="lazy"
+                className="size-full object-cover transition duration-500 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c2415]/90 via-[#0c2415]/20 to-transparent" />
 
-                <span
-                  className={cn(
-                    "absolute left-3 top-3 grid size-8 place-items-center rounded-full text-[10px] font-extrabold backdrop-blur",
-                    item.photo ? "bg-espresso/70 text-gold" : "bg-espresso/80 text-gold",
-                  )}
-                >
-                  {item.number}
-                </span>
-                <span className="absolute bottom-3 left-3 rounded-full border border-white/20 bg-espresso/60 px-2.5 py-1 text-[8px] font-bold uppercase tracking-[0.12em] text-cream/85 backdrop-blur">
-                  {item.tag}
-                </span>
+              {/* Bottom Dark Green Pill Badge with Title */}
+              <div className="absolute inset-x-4 bottom-4">
+                <div className="flex items-center justify-between rounded-2xl bg-[#0e3b1f]/95 p-3.5 text-white backdrop-blur-md transition group-hover:bg-[#43a047]">
+                  <div>
+                    <p className="text-[10px] font-semibold uppercase tracking-wider text-[#81c784] group-hover:text-white/80">
+                      {item.subtitle}
+                    </p>
+                    <p className="mt-0.5 text-sm font-bold leading-tight text-white">
+                      {item.title}
+                    </p>
+                  </div>
+                  <span className="grid size-8 place-items-center rounded-full bg-white/20 text-white transition group-hover:bg-white group-hover:text-[#0c2415]">
+                    <ArrowRight className="size-4" />
+                  </span>
+                </div>
               </div>
-
-              <div className="flex flex-1 flex-col p-4">
-                <h3 className="font-display text-[1rem] font-semibold leading-snug text-ink">
-                  {item.title}
-                </h3>
-                <p className="mt-2 flex-1 text-[11px] leading-relaxed text-ink-soft">{item.text}</p>
-                <span className="mt-4 inline-flex items-center gap-1 text-[9px] font-bold uppercase tracking-[0.14em] text-gold transition group-hover:gap-2">
-                  View batch
-                  <ArrowUpRight className="size-3" />
-                </span>
-              </div>
-            </article>
+            </div>
           ))}
         </div>
+
+        {/* Carousel Dots */}
+        <div className="mt-8 flex items-center gap-2">
+          <span className="h-2.5 w-7 rounded-full bg-[#43a047]" />
+          <span className="size-2.5 rounded-full bg-[#0c2415]/20" />
+          <span className="size-2.5 rounded-full bg-[#0c2415]/20" />
+        </div>
+
       </div>
     </section>
   );
