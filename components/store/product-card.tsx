@@ -112,9 +112,9 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
                 aria-pressed={active}
                 aria-label={`Select ${item.label}`}
                 className={cn(
-                  "relative rounded-full border px-2.5 py-1.5 text-[10.5px] font-bold transition",
+                  "relative rounded-full border px-3 py-1 text-[11px] font-bold transition",
                   active
-                    ? "border-gold/50 bg-gold/15 text-gold-strong"
+                    ? "border-[#43a047] bg-[#e8f5e9] text-[#2e7d32]"
                     : "border-line text-ink-faint hover:border-line-strong hover:text-ink-soft",
                   itemStock <= 0 && "opacity-45",
                 )}
@@ -129,7 +129,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
         <div className="mt-auto flex items-end justify-between gap-2 pt-4">
           <div>
             <div className="flex items-baseline gap-1.5">
-              <span className="tnum font-display text-[1.25rem] font-semibold leading-none text-ink">
+              <span className="tnum font-display text-[1.25rem] font-bold leading-none text-[#0c2415]">
                 {formatPKR(variant.price)}
               </span>
               {variant.compareAt ? (
@@ -141,7 +141,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
             <p
               className={cn(
                 "mt-1.5 text-[9.5px] font-bold uppercase tracking-[0.08em]",
-                soldOut ? "text-danger" : low ? "text-terracotta" : "text-success",
+                soldOut ? "text-danger" : low ? "text-terracotta" : "text-[#2e7d32]",
               )}
             >
               {soldOut ? "Sold out" : low ? "Almost gone" : "In stock · fresh batch"}
@@ -163,10 +163,10 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
               onClick={handleAdd}
               disabled={soldOut}
               className={cn(
-                "inline-flex h-9 items-center gap-1.5 rounded-full px-3.5 text-[11px] font-extrabold transition-all active:scale-[0.97]",
+                "inline-flex h-9 items-center gap-1.5 rounded-full px-4 text-xs font-bold transition-all shadow-sm active:scale-[0.97]",
                 justAdded
-                  ? "bg-success text-espresso"
-                  : "bg-gold text-espresso hover:bg-gold-strong disabled:cursor-not-allowed disabled:bg-surface-3 disabled:text-ink-faint",
+                  ? "bg-[#2e7d32] text-white"
+                  : "bg-[#43a047] text-white hover:bg-[#388e3c] disabled:cursor-not-allowed disabled:bg-surface-3 disabled:text-ink-faint",
               )}
             >
               {justAdded ? (
@@ -174,7 +174,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
               ) : (
                 <Plus className="size-3.5" strokeWidth={3} />
               )}
-              {soldOut ? "Sold out" : justAdded ? "Added" : "Add"}
+              {soldOut ? "Sold out" : justAdded ? "Added" : "Add to Cart"}
             </button>
           </div>
         </div>

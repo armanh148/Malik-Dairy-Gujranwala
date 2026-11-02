@@ -61,46 +61,47 @@ export function ProductCategories() {
         </div>
 
         {/* 3 Green Service Cards */}
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
           {services.map((item) => (
             <article
               key={item.title}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-[#0c2415]/10 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group flex flex-col overflow-hidden rounded-[2rem] border border-[#0c2415]/10 bg-[#0e3b1f] shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(14,59,31,0.35)]"
             >
               {/* Card Image */}
-              <div className="relative aspect-[16/11] overflow-hidden bg-[#0c2415]/5">
+              <div className="relative aspect-[16/11] overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={item.image}
                   alt={item.title}
                   loading="lazy"
-                  className="size-full object-cover transition duration-500 group-hover:scale-105"
+                  className="size-full object-cover transition duration-700 ease-out group-hover:scale-108"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e3b1f] via-transparent to-transparent opacity-60" />
               </div>
 
               {/* Card Body - Deep Forest Green */}
-              <div className="flex flex-1 flex-col justify-between bg-[#0e3b1f] p-7 text-white">
+              <div className="flex flex-1 flex-col justify-between bg-gradient-to-b from-[#0e3b1f] to-[#092815] p-7 text-white sm:p-8">
                 <div>
-                  <span className="inline-block rounded-full bg-white/10 px-3 py-1 text-[11px] font-semibold text-[#81c784]">
+                  <span className="inline-block rounded-full bg-white/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#86efac] backdrop-blur-sm">
                     {item.tag}
                   </span>
-                  <h3 className="mt-3 font-display text-xl font-bold tracking-tight text-white group-hover:text-[#f5b61a]">
+                  <h3 className="mt-3.5 font-display text-[1.35rem] font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-[#f5b61a]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-xs leading-relaxed text-white/75">
+                  <p className="mt-3 text-[13px] leading-relaxed text-white/80">
                     {item.description}
                   </p>
                 </div>
 
-                <div className="mt-6 flex items-center justify-between border-t border-white/10 pt-4">
+                <div className="mt-8 flex items-center justify-between border-t border-white/10 pt-5">
                   <Link
                     href={item.href}
-                    className="text-xs font-bold uppercase tracking-wider text-white transition hover:text-[#f5b61a]"
+                    className="text-xs font-extrabold uppercase tracking-widest text-white/90 transition hover:text-[#f5b61a]"
                   >
                     Read More
                   </Link>
-                  <span className="grid size-9 place-items-center rounded-full bg-[#43a047] text-white shadow-sm transition group-hover:bg-[#f5b61a] group-hover:text-[#0c2415]">
-                    <ArrowRight className="size-4" />
+                  <span className="grid size-10 place-items-center rounded-full bg-[#43a047] text-white shadow-md transition-all duration-300 group-hover:bg-[#f5b61a] group-hover:text-[#0c2415] group-hover:scale-110">
+                    <ArrowRight className="size-4.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                   </span>
                 </div>
               </div>

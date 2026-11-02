@@ -40,36 +40,37 @@ export function TeamSection() {
         </div>
 
         {/* 4 Team Cards */}
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((member, idx) => (
             <article
               key={idx}
-              className="group overflow-hidden rounded-3xl border border-white/10 bg-[#0e3b1f] shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
+              className="group overflow-hidden rounded-[2.2rem] border border-white/10 bg-[#0e3b1f] shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(0,0,0,0.3)] hover:border-[#43a047]/50"
             >
               {/* Photo */}
-              <div className="relative aspect-[3/3.6] overflow-hidden bg-[#0c2415]">
+              <div className="relative aspect-[3/3.7] overflow-hidden bg-[#0c2415]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={member.image}
                   alt={member.name}
                   loading="lazy"
-                  className="size-full object-cover transition duration-500 group-hover:scale-105"
+                  className="size-full object-cover transition duration-700 ease-out group-hover:scale-108"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0e3b1f] via-transparent to-transparent opacity-40" />
               </div>
 
               {/* Info Container */}
-              <div className="flex items-center justify-between p-5">
+              <div className="flex items-center justify-between p-6 bg-gradient-to-b from-[#0e3b1f] to-[#0a2c17]">
                 <div>
-                  <h3 className="text-base font-bold text-white group-hover:text-[#f5b61a]">
+                  <h3 className="font-display text-base font-bold text-white transition-colors duration-300 group-hover:text-[#f5b61a]">
                     {member.name}
                   </h3>
-                  <p className="mt-0.5 text-xs text-[#81c784]">
+                  <p className="mt-1 text-xs font-semibold text-[#86efac]">
                     {member.role}
                   </p>
                 </div>
                 <button
                   type="button"
-                  className="grid size-9 place-items-center rounded-full bg-white/10 text-white transition hover:bg-[#43a047]"
+                  className="grid size-10 place-items-center rounded-full bg-white/10 text-white shadow-sm transition-all duration-300 hover:bg-[#43a047] hover:scale-110"
                   aria-label={`Share ${member.name}'s profile`}
                 >
                   <Share2 className="size-4" />

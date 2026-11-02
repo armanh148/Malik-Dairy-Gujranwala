@@ -36,24 +36,24 @@ export function FaqSection() {
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           
           {/* Left: Green Box with Framed Farmer Photo + Yellow Badge */}
-          <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
-            <div className="relative rounded-3xl bg-[#0c2415] p-6 sm:p-8">
-              <div className="relative aspect-[4/4.5] overflow-hidden rounded-2xl">
+          <div className="relative mx-auto w-full max-w-[540px] lg:max-w-none">
+            <div className="relative rounded-[2.5rem] bg-[#0c2415] p-7 sm:p-9 shadow-2xl">
+              <div className="relative aspect-[4/4.5] overflow-hidden rounded-[2rem] border border-white/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=800&q=80"
+                  src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=900&q=80"
                   alt="Farmer standing proudly in cornfield"
                   loading="lazy"
-                  className="size-full object-cover object-center"
+                  className="size-full object-cover object-center transition duration-700 hover:scale-105"
                 />
               </div>
 
               {/* Floating Yellow Badge */}
-              <div className="absolute -bottom-5 left-1/2 -translate-x-1/2 flex w-[85%] max-w-[300px] items-center gap-3 rounded-2xl bg-[#f5b61a] p-4 text-[#0c2415] shadow-2xl">
-                <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-[#0c2415] text-[#f5b61a]">
-                  <Award className="size-5" />
+              <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 flex w-[88%] max-w-[320px] items-center gap-3.5 rounded-3xl bg-[#f5b61a] p-4.5 text-[#0c2415] shadow-[0_20px_45px_rgba(245,182,26,0.35)] transition-transform duration-300 hover:scale-105">
+                <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-[#0c2415] text-[#f5b61a] shadow-md">
+                  <Award className="size-5.5" />
                 </span>
-                <p className="text-xs font-bold leading-tight">
+                <p className="text-xs font-extrabold leading-snug">
                   25+ Years of Organic Agriculture &amp; Pure Dairy
                 </p>
               </div>
@@ -61,13 +61,13 @@ export function FaqSection() {
           </div>
 
           {/* Right: FAQ Accordions */}
-          <div className="rounded-3xl bg-[#faf8f4] p-8 sm:p-10 border border-[#0c2415]/10">
+          <div className="rounded-[2.5rem] bg-[#faf8f4] p-8 sm:p-12 border border-[#0c2415]/10 shadow-[0_10px_35px_rgba(0,0,0,0.03)]">
             <div className="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5e9] px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#2e7d32]">
               <Leaf className="size-3.5" />
               FAQ Questions
             </div>
 
-            <h2 className="mt-4 font-display text-[clamp(1.85rem,3.8vw,2.75rem)] font-bold tracking-tight text-[#0c2415]">
+            <h2 className="mt-4 font-display text-[clamp(1.9rem,3.8vw,2.8rem)] font-bold tracking-tight text-[#0c2415]">
               How Can We Help You?
             </h2>
 
@@ -79,15 +79,18 @@ export function FaqSection() {
                     <button
                       type="button"
                       onClick={() => setOpenIdx(isOpen ? null : idx)}
-                      className="flex w-full items-center justify-between gap-4 text-left font-display text-sm font-bold text-[#0c2415] transition hover:text-[#43a047]"
+                      className="flex w-full items-center justify-between gap-4 rounded-xl py-1 text-left font-display text-[15px] font-bold text-[#0c2415] transition-colors hover:text-[#43a047]"
                     >
                       <span>{faq.q}</span>
-                      <span className="grid size-7 shrink-0 place-items-center rounded-full bg-[#e8f5e9] text-[#2e7d32]">
+                      <span className={cn(
+                        "grid size-8 shrink-0 place-items-center rounded-full transition-colors",
+                        isOpen ? "bg-[#43a047] text-white" : "bg-[#e8f5e9] text-[#2e7d32]"
+                      )}>
                         {isOpen ? <Minus className="size-3.5" /> : <Plus className="size-3.5" />}
                       </span>
                     </button>
                     {isOpen ? (
-                      <p className="mt-3 text-xs leading-relaxed text-[#385342]">
+                      <p className="mt-3 text-xs leading-relaxed text-[#385342] pl-1">
                         {faq.a}
                       </p>
                     ) : null}

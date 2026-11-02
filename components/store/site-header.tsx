@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { ArrowRight, Menu, Phone, ShoppingBag } from "lucide-react";
+import { ArrowRight, Menu, Phone, ShoppingBag, MapPin } from "lucide-react";
 import { Logo } from "@/components/brand/logo";
 import { WhatsAppIcon } from "@/components/ui/whatsapp-icon";
 import { Sheet } from "@/components/ui/sheet";
@@ -29,6 +29,28 @@ export function SiteHeader() {
 
   return (
     <>
+      {/* Top Notification Strip */}
+      <div className="hidden border-b border-white/10 bg-[#081b0f] py-2 text-xs text-white/70 sm:block">
+        <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center gap-6 text-[11px] font-medium">
+            <span className="flex items-center gap-1.5">
+              <MapPin className="size-3 text-[#43a047]" />
+              GT Road, Gujranwala, Punjab
+            </span>
+            <span className="flex items-center gap-1.5">
+              <Phone className="size-3 text-[#43a047]" />
+              +92 300 1234567
+            </span>
+          </div>
+          <div className="flex items-center gap-4 text-[11px]">
+            <span className="inline-flex items-center gap-1.5 font-semibold text-[#86efac]">
+              <span className="size-1.5 rounded-full bg-[#43a047] animate-pulse" />
+              100% Certified Organic &amp; Farm Purity
+            </span>
+          </div>
+        </div>
+      </div>
+
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0c2415]/95 text-white backdrop-blur-xl">
         <div className="relative mx-auto flex h-[76px] max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
           <Logo invert />

@@ -60,44 +60,44 @@ export function Testimonials() {
         </div>
 
         {/* 3 Review Cards */}
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
           {reviews.map((rev, idx) => (
             <article
               key={idx}
-              className="flex flex-col justify-between rounded-3xl border border-[#0c2415]/10 bg-white p-7 shadow-sm transition duration-300 hover:border-[#43a047] hover:shadow-lg"
+              className="flex flex-col justify-between rounded-[2rem] border border-[#0c2415]/10 bg-white p-8 shadow-sm transition-all duration-300 hover:border-[#43a047]/40 hover:-translate-y-1.5 hover:shadow-[0_20px_40px_rgba(12,36,21,0.08)]"
             >
               <div>
                 {/* Verified Tag & Stars */}
                 <div className="flex items-center justify-between">
-                  <span className="rounded-full bg-[#e8f5e9] px-2.5 py-0.5 text-[10px] font-bold text-[#2e7d32]">
+                  <span className="rounded-full bg-[#e8f5e9] px-3 py-1 text-[10px] font-bold tracking-wider text-[#2e7d32]">
                     {rev.tag}
                   </span>
-                  <div className="flex text-[#43a047]">
+                  <div className="flex gap-0.5 text-[#43a047]">
                     {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="size-3.5 fill-current" />
+                      <Star key={i} className="size-4 fill-current" />
                     ))}
                   </div>
                 </div>
 
                 {/* Quote */}
-                <p className="mt-5 text-sm leading-relaxed text-[#0c2415]/80">
+                <p className="mt-6 font-display text-[14px] leading-relaxed text-[#0c2415]/85 italic">
                   &ldquo;{rev.quote}&rdquo;
                 </p>
               </div>
 
               {/* Reviewer Profile */}
-              <div className="mt-6 flex items-center gap-3.5 border-t border-[#0c2415]/10 pt-5">
+              <div className="mt-8 flex items-center gap-3.5 border-t border-[#0c2415]/10 pt-5">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={rev.avatar}
                   alt={rev.name}
-                  className="size-11 rounded-full object-cover shadow-sm"
+                  className="size-12 rounded-full border-2 border-[#43a047]/40 object-cover shadow-sm ring-2 ring-[#e8f5e9]"
                 />
                 <div>
-                  <h4 className="text-sm font-bold text-[#0c2415]">
+                  <h4 className="text-[14px] font-bold text-[#0c2415]">
                     {rev.name}
                   </h4>
-                  <p className="text-xs text-[#385342]">
+                  <p className="text-xs font-medium text-[#385342]">
                     {rev.role}
                   </p>
                 </div>

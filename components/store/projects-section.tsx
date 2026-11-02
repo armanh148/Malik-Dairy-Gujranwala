@@ -45,11 +45,11 @@ export function ProjectsSection() {
         </div>
 
         {/* 4 Tall Gallery Cards */}
-        <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((item, idx) => (
             <div
               key={idx}
-              className="group relative aspect-[3/4.4] overflow-hidden rounded-3xl bg-[#0c2415]/10 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+              className="group relative aspect-[3/4.6] overflow-hidden rounded-[2.2rem] bg-[#0c2415]/10 shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(12,36,21,0.18)]"
             >
               {/* Image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -57,22 +57,22 @@ export function ProjectsSection() {
                 src={item.image}
                 alt={item.title}
                 loading="lazy"
-                className="size-full object-cover transition duration-500 group-hover:scale-105"
+                className="size-full object-cover transition duration-700 ease-out group-hover:scale-108"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0c2415]/90 via-[#0c2415]/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0c2415] via-[#0c2415]/30 to-transparent opacity-90 transition-opacity group-hover:opacity-95" />
 
               {/* Bottom Dark Green Pill Badge with Title */}
               <div className="absolute inset-x-4 bottom-4">
-                <div className="flex items-center justify-between rounded-2xl bg-[#0e3b1f]/95 p-3.5 text-white backdrop-blur-md transition group-hover:bg-[#43a047]">
+                <div className="flex items-center justify-between rounded-2xl border border-white/10 bg-[#0c2415]/90 p-4 text-white backdrop-blur-md transition-all duration-300 group-hover:bg-[#43a047] group-hover:border-[#43a047]">
                   <div>
-                    <p className="text-[10px] font-semibold uppercase tracking-wider text-[#81c784] group-hover:text-white/80">
+                    <p className="text-[10px] font-bold uppercase tracking-wider text-[#86efac] group-hover:text-white/90">
                       {item.subtitle}
                     </p>
-                    <p className="mt-0.5 text-sm font-bold leading-tight text-white">
+                    <p className="mt-0.5 font-display text-[15px] font-bold leading-tight text-white">
                       {item.title}
                     </p>
                   </div>
-                  <span className="grid size-8 place-items-center rounded-full bg-white/20 text-white transition group-hover:bg-white group-hover:text-[#0c2415]">
+                  <span className="grid size-9 place-items-center rounded-full bg-white/20 text-white transition-all duration-300 group-hover:bg-white group-hover:text-[#0c2415] group-hover:scale-110">
                     <ArrowRight className="size-4" />
                   </span>
                 </div>
