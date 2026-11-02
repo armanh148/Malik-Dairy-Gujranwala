@@ -24,7 +24,7 @@ const articles = [
     title: "Organic Soil Enrichment: Cultivating Clean Punjab Green Pastures",
   },
   {
-    image: "https://images.unsplash.com/photo-1594488518001-447a1bf64c58?auto=format&fit=crop&w=700&q=80",
+    image: "https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=700&q=80",
     category: "Farm Diary",
     date: "Oct 05, 2026",
     readTime: "3 min read",
@@ -109,44 +109,48 @@ export function BlogSection() {
             </article>
           </div>
 
-          {/* Right: 2x2 Grid of 4 Smaller Cards (7 columns) */}
-          <div className="grid gap-6 sm:grid-cols-2 lg:col-span-7">
+          {/* Right: 2x2 Grid of 4 Smaller Cards (2 per row on Mobile & Desktop) */}
+          <div className="grid grid-cols-2 gap-2.5 sm:gap-6 lg:col-span-7">
             {articles.map((item, idx) => (
               <article
                 key={idx}
-                className="group overflow-hidden rounded-[2rem] border border-[#0c2415]/10 bg-[#faf9f5] shadow-xs transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white hover:-translate-y-1.5 hover:shadow-md"
+                className="group flex flex-col justify-between overflow-hidden rounded-2xl sm:rounded-[2rem] border border-[#0c2415]/10 bg-[#faf9f5] shadow-xs transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white hover:-translate-y-1.5 hover:shadow-md cursor-pointer"
               >
-                <div className="relative aspect-[16/10] overflow-hidden bg-[#0c2415]/10">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    loading="lazy"
-                    className="size-full object-cover transition duration-700 ease-out group-hover:scale-110"
-                  />
-                  <div className="absolute left-3 top-3">
-                    <span className="rounded-full bg-white/90 px-2.5 py-0.5 text-[10px] font-bold text-[#0c2415] shadow-xs backdrop-blur-md">
-                      {item.category}
-                    </span>
+                <div>
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[#0c2415]/10">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      loading="lazy"
+                      className="size-full object-cover transition duration-700 ease-out group-hover:scale-110"
+                    />
+                    <div className="absolute left-2 top-2 sm:left-3 sm:top-3">
+                      <span className="rounded-full bg-white/90 px-2 py-0.5 text-[8.5px] sm:text-[10px] font-bold text-[#0c2415] shadow-xs backdrop-blur-md">
+                        {item.category}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="p-3 sm:p-6">
+                    <div className="flex items-center justify-between text-[9.5px] sm:text-[11px] font-semibold text-[#385342]">
+                      <span className="flex items-center gap-1 sm:gap-1.5">
+                        <Calendar className="size-2.5 sm:size-3 text-[#43a047]" />
+                        {item.date}
+                      </span>
+                      <span>{item.readTime}</span>
+                    </div>
+
+                    <h3 className="mt-1.5 sm:mt-2.5 font-display text-[12px] sm:text-[14.5px] font-bold leading-snug text-[#0c2415] transition-colors group-hover:text-[#43a047] line-clamp-2">
+                      {item.title}
+                    </h3>
                   </div>
                 </div>
 
-                <div className="p-6">
-                  <div className="flex items-center justify-between text-[11px] font-semibold text-[#385342]">
-                    <span className="flex items-center gap-1.5">
-                      <Calendar className="size-3 text-[#43a047]" />
-                      {item.date}
-                    </span>
-                    <span>{item.readTime}</span>
-                  </div>
-
-                  <h3 className="mt-2.5 font-display text-[14.5px] font-bold leading-snug text-[#0c2415] transition-colors group-hover:text-[#43a047]">
-                    {item.title}
-                  </h3>
-
-                  <div className="mt-4 flex items-center gap-1.5 text-xs font-extrabold text-[#43a047]">
+                <div className="px-3 pb-3 sm:px-6 sm:pb-6">
+                  <div className="flex items-center gap-1 text-[11px] sm:text-xs font-extrabold text-[#43a047]">
                     <span>Read Article</span>
-                    <ArrowRight className="size-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                    <ArrowRight className="size-3 sm:size-3.5 transition-transform duration-200 group-hover:translate-x-1" />
                   </div>
                 </div>
               </article>
