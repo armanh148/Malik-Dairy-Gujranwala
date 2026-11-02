@@ -88,76 +88,78 @@ export function Hero() {
       </div>
 
       {/* Yellow Trust & Certification Bar */}
-      <div className="relative border-y border-[#dfa00f] bg-[#f5b61a] py-4 sm:py-6 text-[#0d2a19] shadow-[0_10px_30px_rgba(245,182,26,0.2)]">
-        <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-4 sm:gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
-          
-          {/* Item 1: Clients */}
-          <div className="flex items-center gap-3.5 justify-start">
-            <div className="flex -space-x-2.5 sm:-space-x-3">
-              {[
-                "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80",
-                "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80",
-                "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80",
-              ].map((src, i) => (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  key={i}
-                  src={src}
-                  alt="Client avatar"
-                  className="size-10 sm:size-12 rounded-full border-2 border-[#f5b61a] object-cover shadow-sm ring-1 ring-black/10"
-                />
-              ))}
-              <span className="grid size-10 sm:size-12 place-items-center rounded-full border-2 border-[#f5b61a] bg-[#0c2415] text-[10px] sm:text-[11px] font-black text-[#f5b61a] shadow-sm">
-                +25k
-              </span>
-            </div>
-            <div>
-              <p className="font-display text-sm sm:text-[15px] font-extrabold leading-tight text-[#0c2415]">
-                Trusted Over 25,000+
-              </p>
-              <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0d2a19]/80">
-                Regular Happy Clients
-              </p>
-            </div>
-          </div>
-
-          {/* Item 2: Certified Seal Emblem */}
-          <div className="flex items-center justify-start sm:justify-center border-t border-[#0c2415]/10 pt-3 sm:border-none sm:pt-0">
-            <div className="flex items-center gap-3 rounded-full border-2 border-dashed border-[#0c2415]/40 bg-white/40 px-4 py-2 sm:px-5 sm:py-2.5 backdrop-blur-md shadow-sm transition hover:bg-white/60">
-              <span className="grid size-9 sm:size-11 place-items-center rounded-full bg-[#0c2415] text-[#43a047] shadow-md ring-2 ring-[#43a047]/30">
-                <Leaf className="size-4.5 sm:size-5.5" />
-              </span>
-              <div>
-                <p className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-[#0c2415]">
-                  100% Organic Quality
+      <div className="relative border-y border-[#dfa00f] bg-[#f5b61a] py-3.5 sm:py-5 text-[#0d2a19] shadow-[0_10px_30px_rgba(245,182,26,0.2)]">
+        <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-2.5 sm:grid-cols-3 sm:items-center sm:gap-6">
+            
+            {/* Item 1: Clients */}
+            <div className="flex items-center gap-3 rounded-2xl border border-[#0c2415]/10 bg-white/40 p-3 sm:border-none sm:bg-transparent sm:p-0 sm:justify-start">
+              <div className="flex -space-x-2.5 sm:-space-x-3 shrink-0">
+                {[
+                  "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=120&q=80",
+                  "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=120&q=80",
+                  "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=120&q=80",
+                ].map((src, i) => (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    key={i}
+                    src={src}
+                    alt="Client avatar"
+                    className="size-10 sm:size-11 rounded-full border-2 border-white object-cover shadow-xs ring-1 ring-black/10"
+                  />
+                ))}
+                <span className="grid size-10 sm:size-11 place-items-center rounded-full border-2 border-white bg-[#0c2415] text-[10px] sm:text-[11px] font-black text-[#f5b61a] shadow-xs">
+                  +25k
+                </span>
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-[14.5px] sm:text-[15.5px] font-extrabold leading-tight text-[#0c2415]">
+                  Trusted Over 25,000+
                 </p>
-                <p className="text-[10px] sm:text-[10.5px] font-extrabold text-[#0c2415]/80">
-                  Certified Farm Purity
+                <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0c2415]/80">
+                  Regular Happy Clients
                 </p>
               </div>
             </div>
-          </div>
 
-          {/* Item 3: Fresh Produce Thumbnail */}
-          <div className="flex items-center justify-start sm:justify-end gap-3.5 border-t border-[#0c2415]/10 pt-3 sm:border-none sm:pt-0">
-            <div className="relative size-12 sm:size-14 shrink-0 overflow-hidden rounded-xl sm:rounded-2xl border-2 border-[#0c2415]/25 shadow-sm">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80"
-                alt="Organic farm produce"
-                className="size-full object-cover"
-              />
+            {/* Item 2: Certified Seal Emblem */}
+            <div className="flex items-center justify-start sm:justify-center">
+              <div className="flex w-full sm:w-auto items-center gap-3 rounded-2xl border border-[#0c2415]/10 bg-white/40 p-3 sm:rounded-full sm:border-2 sm:border-dashed sm:border-[#0c2415]/35 sm:bg-white/45 sm:px-6 sm:py-2.5 sm:backdrop-blur-sm sm:shadow-sm">
+                <span className="grid size-10 sm:size-11 shrink-0 place-items-center rounded-full bg-[#0c2415] text-[#86efac] shadow-sm ring-2 ring-[#0c2415]/20">
+                  <Leaf className="size-5 sm:size-5.5" />
+                </span>
+                <div className="min-w-0">
+                  <p className="font-display text-[14.5px] sm:text-[15.5px] font-extrabold leading-tight text-[#0c2415]">
+                    100% Organic Quality
+                  </p>
+                  <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0c2415]/80">
+                    Certified Farm Purity
+                  </p>
+                </div>
+              </div>
             </div>
-            <div>
-              <p className="font-display text-sm sm:text-[15px] font-extrabold leading-tight text-[#0c2415]">
-                Fresh &amp; 100% Pure
-              </p>
-              <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0d2a19]/80">
-                Organic Farm Products
-              </p>
-            </div>
-          </div>
 
+            {/* Item 3: Fresh Produce Thumbnail */}
+            <div className="flex items-center gap-3 rounded-2xl border border-[#0c2415]/10 bg-white/40 p-3 sm:border-none sm:bg-transparent sm:p-0 sm:justify-end">
+              <div className="relative size-10 sm:size-12 shrink-0 overflow-hidden rounded-xl sm:rounded-2xl border-2 border-white shadow-xs">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=200&q=80"
+                  alt="Organic farm produce"
+                  className="size-full object-cover"
+                />
+              </div>
+              <div className="min-w-0">
+                <p className="font-display text-[14.5px] sm:text-[15.5px] font-extrabold leading-tight text-[#0c2415]">
+                  Fresh &amp; 100% Pure
+                </p>
+                <p className="mt-0.5 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0c2415]/80">
+                  Organic Farm Products
+                </p>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
