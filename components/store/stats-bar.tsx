@@ -10,7 +10,7 @@ const stats = [
 export function StatsBar() {
   return (
     <section className="border-y border-line bg-canvas-deep py-10 sm:py-12">
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 gap-px overflow-hidden rounded-[1.7rem] border border-line bg-line lg:grid-cols-4">
           {stats.map((stat) => {
             const Icon = stat.icon;

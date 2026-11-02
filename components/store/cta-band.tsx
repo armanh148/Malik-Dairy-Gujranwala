@@ -5,7 +5,7 @@ import { supportWhatsAppMessage, whatsappLink } from "@/lib/whatsapp";
 export function CtaBand() {
   return (
     <section className="bg-canvas px-4 pb-16 pt-4 sm:px-6 sm:pb-20 lg:px-8 lg:pb-24">
-      <div className="relative mx-auto max-w-[1240px] overflow-hidden rounded-[2rem] bg-espresso px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
+      <div className="relative mx-auto max-w-[1600px] overflow-hidden rounded-[2rem] bg-espresso px-6 py-12 sm:px-10 sm:py-14 lg:px-16 lg:py-16">
         <div className="pattern-grid absolute inset-0 opacity-[0.07]" />
         <div
           className="absolute -left-20 -top-24 size-[420px] rounded-full opacity-50 blur-3xl"

@@ -20,7 +20,7 @@ export function Hero() {
       </div>
 
       {/* Hero Content */}
-      <div className="relative mx-auto max-w-[1240px] px-4 pb-24 pt-20 sm:px-6 sm:pb-32 sm:pt-28 lg:px-8">
+      <div className="relative mx-auto max-w-[1600px] px-4 pb-24 pt-20 sm:px-6 sm:pb-32 sm:pt-28 lg:px-8">
         <div className="max-w-[720px]">
           {/* Pill Tag */}
           <div className="inline-flex items-center gap-2 rounded-full border border-[#43a047]/40 bg-[#0c2617]/70 px-4 py-1.5 text-xs font-semibold text-[#81c784] backdrop-blur-md">
@@ -88,7 +88,7 @@ export function Hero() {
 
       {/* Yellow Trust & Certification Bar */}
       <div className="relative border-t border-[#e2a412] bg-[#f5b61a] py-5 text-[#0d2a19] shadow-inner sm:py-6">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 items-center gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 items-center gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
           
           {/* Item 1: Clients */}
           <div className="flex items-center gap-4">

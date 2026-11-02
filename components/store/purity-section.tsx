@@ -54,7 +54,7 @@ export function PuritySection() {
         style={{ background: "radial-gradient(circle, rgba(163,190,145,0.24), transparent 65%)" }}
       />
 
-      <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-[600px]">
             <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-gold">The Malik standard</p>

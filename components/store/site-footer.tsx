@@ -31,7 +31,7 @@ export function SiteFooter() {
       
       {/* Yellow Contact Bar */}
       <div className="border-b border-[#e2a412] bg-[#f5b61a] py-6 text-[#0d2a19]">
-        <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
           
           {/* Phone */}
           <a
@@ -93,7 +93,7 @@ export function SiteFooter() {
       </div>
 
       {/* Main Footer Container */}
-      <div className="relative mx-auto max-w-[1240px] px-4 pb-12 pt-16 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[1600px] px-4 pb-12 pt-16 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-12">
           
           {/* Col 1: Brand Info (4 cols) */}

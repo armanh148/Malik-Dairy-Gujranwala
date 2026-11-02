@@ -27,7 +27,7 @@ const articles = [
 export function BlogSection() {
   return (
     <section id="blog" className="relative scroll-mt-20 bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center">

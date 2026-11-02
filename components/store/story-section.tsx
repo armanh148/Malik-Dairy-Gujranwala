@@ -4,7 +4,7 @@ import { ArrowRight, CheckCircle2, Award, Leaf } from "lucide-react";
 export function StorySection() {
   return (
     <section id="about" className="relative scroll-mt-20 bg-[#0c2415] py-20 text-white sm:py-28">
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           
           {/* Left: Farmer holding tomato crate + Floating Yellow Badge */}

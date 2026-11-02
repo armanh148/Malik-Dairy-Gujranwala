@@ -26,7 +26,7 @@ const steps = [
 export function WorkflowSection() {
   return (
     <section id="process" className="relative scroll-mt-20 bg-white py-20 sm:py-24">
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">

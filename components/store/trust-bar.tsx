@@ -26,7 +26,7 @@ const items = [
 export function TrustBar() {
   return (
     <section className="border-y border-line bg-surface/60">
-      <div className="mx-auto grid max-w-[1240px] grid-cols-1 gap-px px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-px px-4 sm:grid-cols-2 sm:px-6 lg:grid-cols-4 lg:px-8">
         {items.map((item) => {
           const Icon = item.icon;
           return (

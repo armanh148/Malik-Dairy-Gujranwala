@@ -26,7 +26,7 @@ const team = [
 export function TeamSection() {
   return (
     <section id="team" className="relative scroll-mt-20 bg-[#0c2415] py-20 text-white sm:py-24">
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
         <div className="text-center">

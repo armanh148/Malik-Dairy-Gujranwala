@@ -65,7 +65,7 @@ export function PlansSection() {
         style={{ background: "radial-gradient(ellipse, rgba(216,163,63,0.22), transparent 65%)" }}
       />
 
-      <div className="relative mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[620px] text-center">
           <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-gold">Dairy plans</p>
           <h2 className="mt-4 font-display text-[clamp(2rem,4vw,3.25rem)] font-semibold leading-[1.02] tracking-[-0.04em] text-ink">
