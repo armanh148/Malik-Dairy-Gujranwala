@@ -88,7 +88,7 @@ export function ProjectsSection() {
                       {item.title}
                     </p>
                   </div>
-                  <span className="grid size-10 place-items-center rounded-full bg-white/20 text-white shadow-sm transition-all duration-300 group-hover:bg-white group-hover:text-[#0c2415] group-hover:scale-110">
+                  <span className="grid size-10 place-items-center rounded-full bg-white/20 text-white shadow-sm transition-all duration-300 group-hover:bg-white group-hover:text-[#0c2415] group-hover:scale-110 group-hover:rotate-[-45deg]">
                     <ArrowRight className="size-4.5" />
                   </span>
                 </div>

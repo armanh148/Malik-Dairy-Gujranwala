@@ -53,7 +53,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
 
   return (
     <article
-      className="group relative flex flex-col overflow-hidden rounded-[2rem] border border-[#0c2415]/10 bg-white shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-[#43a047] hover:shadow-[0_20px_40px_rgba(12,36,21,0.08)]"
+      className="group relative flex flex-col overflow-hidden rounded-[2rem] border border-[#0c2415]/10 bg-white shadow-xs transition-all duration-300 hover:-translate-y-2 hover:border-[#43a047] hover:shadow-[0_24px_48px_rgba(12,36,21,0.12)] cursor-pointer"
       style={{ animationDelay: `${index * 50}ms` }}
     >
       <div

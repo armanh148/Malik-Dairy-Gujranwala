@@ -77,10 +77,10 @@ export function Testimonials() {
           {reviews.map((rev, idx) => (
             <article
               key={idx}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-[2.2rem] border border-[#0c2415]/10 bg-white p-8 shadow-sm transition-all duration-500 hover:border-[#43a047] hover:-translate-y-2 hover:shadow-[0_20px_45px_rgba(12,36,21,0.1)]"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-[2.2rem] border border-[#0c2415]/10 bg-white p-8 shadow-sm transition-all duration-500 hover:border-[#43a047] hover:-translate-y-2.5 hover:shadow-[0_25px_50px_rgba(12,36,21,0.12)] cursor-pointer"
             >
               {/* Subtle Decorative Quote Icon in Card Background */}
-              <Quote className="pointer-events-none absolute right-6 top-6 size-12 text-[#43a047]/10 transition-transform duration-500 group-hover:scale-110 group-hover:text-[#43a047]/20" />
+              <Quote className="pointer-events-none absolute right-6 top-6 size-12 text-[#43a047]/10 transition-all duration-500 group-hover:scale-115 group-hover:rotate-12 group-hover:text-[#43a047]/25" />
 
               <div>
                 {/* Verified Tag, Product & Rating */}

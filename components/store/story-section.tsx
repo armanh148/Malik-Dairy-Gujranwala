@@ -109,12 +109,12 @@ export function StorySection() {
             <div className="mt-9 space-y-6">
               
               {/* Feature 1 */}
-              <div className="flex items-start gap-4">
-                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20">
+              <div className="group flex items-start gap-4 rounded-2xl p-2 transition-all duration-300 hover:translate-x-1.5">
+                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20 transition-transform duration-300 group-hover:scale-110">
                   <Check className="size-5" strokeWidth={3} />
                 </span>
                 <div>
-                  <h3 className="font-display text-[17px] font-bold text-white">
+                  <h3 className="font-display text-[17px] font-bold text-white transition-colors duration-300 group-hover:text-[#86efac]">
                     100% Guaranteed Organic Product
                   </h3>
                   <p className="mt-1 text-[13.5px] leading-relaxed text-white/75">
@@ -124,12 +124,12 @@ export function StorySection() {
               </div>
 
               {/* Feature 2 */}
-              <div className="flex items-start gap-4">
-                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20">
+              <div className="group flex items-start gap-4 rounded-2xl p-2 transition-all duration-300 hover:translate-x-1.5">
+                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20 transition-transform duration-300 group-hover:scale-110">
                   <Check className="size-5" strokeWidth={3} />
                 </span>
                 <div>
-                  <h3 className="font-display text-[17px] font-bold text-white">
+                  <h3 className="font-display text-[17px] font-bold text-white transition-colors duration-300 group-hover:text-[#86efac]">
                     Top-Quality Healthy Food Production
                   </h3>
                   <p className="mt-1 text-[13.5px] leading-relaxed text-white/75">
@@ -144,7 +144,7 @@ export function StorySection() {
             <div className="mt-10 flex flex-wrap items-center gap-4">
               <Link
                 href="/#services"
-                className="group inline-flex items-center gap-3 rounded-full bg-[#43a047] px-8 py-4 text-xs font-bold uppercase tracking-widest text-white shadow-[0_12px_28px_-5px_rgba(67,160,71,0.55)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-0.5"
+                className="shimmer-btn group inline-flex items-center gap-3 rounded-full bg-[#43a047] px-8 py-4 text-xs font-bold uppercase tracking-widest text-white shadow-[0_12px_28px_-5px_rgba(67,160,71,0.55)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-1 active:scale-95"
               >
                 <span>Discover More</span>
                 <span className="grid size-6 place-items-center rounded-full bg-white/20 transition-transform duration-300 group-hover:translate-x-1">

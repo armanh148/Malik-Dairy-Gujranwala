@@ -74,7 +74,7 @@ export function ProductCategories() {
           {services.map((item) => (
             <article
               key={item.title}
-              className="group flex flex-col overflow-hidden rounded-[2.4rem] border border-[#0c2415]/10 bg-[#0e3b1f] shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_-15px_rgba(14,59,31,0.4)]"
+              className="group flex flex-col overflow-hidden rounded-[2.4rem] border border-[#0c2415]/10 bg-[#0e3b1f] shadow-md transition-all duration-500 hover:-translate-y-2.5 hover:border-[#43a047]/60 hover:shadow-[0_30px_60px_-12px_rgba(14,59,31,0.5)] cursor-pointer"
             >
               {/* Card Image */}
               <div className="relative aspect-[16/11] overflow-hidden bg-[#0c2415]">

@@ -92,7 +92,7 @@ export function TeamSection() {
                 </div>
                 <button
                   type="button"
-                  className="grid size-11 place-items-center rounded-full bg-white/10 text-white shadow-sm transition-all duration-300 hover:bg-[#43a047] hover:scale-110 active:scale-95"
+                  className="grid size-11 place-items-center rounded-full bg-white/10 text-white shadow-sm transition-all duration-500 hover:bg-[#43a047] hover:scale-110 hover:rotate-[360deg] active:scale-95 cursor-pointer"
                   aria-label={`Share ${member.name}'s profile`}
                 >
                   <Share2 className="size-4.5" />

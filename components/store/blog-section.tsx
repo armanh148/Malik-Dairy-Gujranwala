@@ -61,7 +61,7 @@ export function BlogSection() {
           
           {/* Left: 1 Large Featured Post (5 columns) */}
           <div className="lg:col-span-5">
-            <article className="group relative flex h-full min-h-[500px] flex-col justify-end overflow-hidden rounded-[2.5rem] bg-[#0c2415] p-8 text-white shadow-xl transition-all duration-500 hover:-translate-y-1.5 hover:shadow-[0_25px_50px_rgba(12,36,21,0.25)]">
+            <article className="group relative flex h-full min-h-[500px] flex-col justify-end overflow-hidden rounded-[2.5rem] bg-[#0c2415] p-8 text-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(12,36,21,0.3)] cursor-pointer">
               {/* Image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img

@@ -8,6 +8,7 @@ import { TeamSection } from "@/components/store/team-section";
 import { Testimonials } from "@/components/store/testimonials";
 import { FaqSection } from "@/components/store/faq-section";
 import { BlogSection } from "@/components/store/blog-section";
+import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
 export default function HomePage() {
   return (
@@ -16,31 +17,49 @@ export default function HomePage() {
       <Hero />
 
       {/* 2. We Offers Eco & Agriculture Services (3 Green Cards) */}
-      <ProductCategories />
+      <ScrollReveal direction="up" delay={40}>
+        <ProductCategories />
+      </ScrollReveal>
 
       {/* 3. Farm Fresh Pantry Products (Shop / Add to Cart) */}
-      <ProductGrid />
+      <ScrollReveal direction="up" delay={40}>
+        <ProductGrid />
+      </ScrollReveal>
 
-      {/* 4. Welcome To All Express Nature & Organic Farm (Dark Green Story Section) */}
-      <StorySection />
+      {/* 4. Welcome To Malik Dairy Farm (Dark Green Story Section) */}
+      <ScrollReveal direction="up" delay={40}>
+        <StorySection />
+      </ScrollReveal>
 
       {/* 5. Recently Completed Project (4 Tall Gallery Cards) */}
-      <ProjectsSection />
+      <ScrollReveal direction="up" delay={40}>
+        <ProjectsSection />
+      </ScrollReveal>
 
       {/* 6. How We Do Agricultural Work (Process with Woman & 4 Steps) */}
-      <WorkflowSection />
+      <ScrollReveal direction="up" delay={40}>
+        <WorkflowSection />
+      </ScrollReveal>
 
       {/* 7. We Have A Lot Of Experience Team Members (Dark Green Section) */}
-      <TeamSection />
+      <ScrollReveal direction="up" delay={40}>
+        <TeamSection />
+      </ScrollReveal>
 
       {/* 8. Trusted By 1000+ Customers (Testimonials) */}
-      <Testimonials />
+      <ScrollReveal direction="up" delay={40}>
+        <Testimonials />
+      </ScrollReveal>
 
       {/* 9. How Can We Help You? (Split FAQ Section) */}
-      <FaqSection />
+      <ScrollReveal direction="up" delay={40}>
+        <FaqSection />
+      </ScrollReveal>
 
       {/* 10. Our Blog & Articles (Magazine Grid) */}
-      <BlogSection />
+      <ScrollReveal direction="up" delay={40}>
+        <BlogSection />
+      </ScrollReveal>
     </>
   );
 }

@@ -44,19 +44,19 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <Link
               href="/#services"
-              className="group inline-flex items-center gap-2.5 rounded-full bg-[#43a047] px-8 py-4 text-sm font-bold text-white shadow-[0_10px_25px_-5px_rgba(67,160,71,0.5)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_15px_30px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-0.5"
+              className="shimmer-btn group inline-flex items-center gap-2.5 rounded-full bg-[#43a047] px-8 py-4 text-sm font-bold text-white shadow-[0_10px_25px_-5px_rgba(67,160,71,0.5)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-1 active:scale-95"
             >
               Discover More
-              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1.5" />
             </Link>
 
             <a
               href={whatsappLink(supportWhatsAppMessage())}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-3 rounded-full border border-white/30 bg-black/30 px-7 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-black/50 hover:border-white/50"
+              className="group inline-flex items-center gap-3 rounded-full border border-white/30 bg-black/30 px-7 py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-black/55 hover:border-white/60 hover:-translate-y-1 active:scale-95"
             >
-              <span className="grid size-7 place-items-center rounded-full bg-white text-[#0a2315] shadow-sm">
+              <span className="grid size-7 place-items-center rounded-full bg-white text-[#0a2315] shadow-sm transition-transform duration-300 group-hover:scale-110">
                 <Play className="ml-0.5 size-3 fill-[#0a2315]" />
               </span>
               Watch Our Story
@@ -65,19 +65,19 @@ export function Hero() {
 
           {/* Feature Badges */}
           <div className="mt-11 flex flex-wrap items-center gap-4 text-xs font-semibold text-white/80">
-            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm">
+            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
               <span className="grid size-4 place-items-center rounded-full bg-[#43a047] text-white">
                 <Check className="size-2.5" strokeWidth={3} />
               </span>
               100% Pure Desi Ghee
             </span>
-            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm">
+            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
               <span className="grid size-4 place-items-center rounded-full bg-[#43a047] text-white">
                 <Check className="size-2.5" strokeWidth={3} />
               </span>
               Zero Adulteration
             </span>
-            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm">
+            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3.5 py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
               <span className="grid size-4 place-items-center rounded-full bg-[#43a047] text-white">
                 <Check className="size-2.5" strokeWidth={3} />
               </span>

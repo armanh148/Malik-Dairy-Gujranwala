@@ -74,7 +74,7 @@ export function SiteHeader() {
           <div className="flex items-center gap-2.5">
             <Link
               href="/#contact"
-              className="hidden items-center gap-2 rounded-full bg-[#43a047] px-5 py-2.5 text-xs font-bold text-white shadow-md transition duration-200 hover:bg-[#388e3c] sm:inline-flex"
+              className="shimmer-btn hidden items-center gap-2 rounded-full bg-[#43a047] px-5 py-2.5 text-xs font-bold text-white shadow-md transition duration-200 hover:bg-[#388e3c] hover:shadow-lg hover:-translate-y-0.5 active:scale-95 sm:inline-flex"
             >
               Get In Touch
               <ArrowRight className="size-3.5" />
