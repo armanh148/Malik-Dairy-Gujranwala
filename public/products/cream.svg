@@ -1,0 +1,71 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 330) rotate(90) scale(244)">
+      <stop stop-color="#E7D3A6" stop-opacity="0.4" />
+      <stop offset="1" stop-color="#E7D3A6" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="glass" x1="230" y1="230" x2="420" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFCF2" />
+      <stop offset="0.55" stop-color="#F5EEDD" />
+      <stop offset="1" stop-color="#E2D5BC" />
+    </linearGradient>
+    <linearGradient id="cream" x1="260" y1="300" x2="400" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFCF4" />
+      <stop offset="0.6" stop-color="#FBF3E1" />
+      <stop offset="1" stop-color="#EFE2C6" />
+    </linearGradient>
+    <linearGradient id="cap" x1="272" y1="142" x2="368" y2="184" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0A845" />
+      <stop offset="0.55" stop-color="#C1892C" />
+      <stop offset="1" stop-color="#96631A" />
+    </linearGradient>
+    <linearGradient id="label" x1="250" y1="350" x2="395" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6C7B57" />
+      <stop offset="1" stop-color="#4F5D3E" />
+    </linearGradient>
+    <linearGradient id="dollop" x1="430" y1="450" x2="500" y2="520" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF7" />
+      <stop offset="1" stop-color="#EFE4CB" />
+    </linearGradient>
+    <linearGradient id="cloth" x1="170" y1="500" x2="490" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4E7CE" />
+      <stop offset="1" stop-color="#E4D2AF" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="320" cy="330" r="244" fill="url(#halo)" />
+  <circle cx="320" cy="322" r="208" stroke="#C98A2E" stroke-opacity="0.18" stroke-width="1.5" stroke-dasharray="2 11" />
+  <ellipse cx="320" cy="558" rx="182" ry="26" fill="url(#cloth)" />
+  <path d="M158 548C230 536 412 536 484 548" stroke="#D5BE96" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+
+  <!-- bottle -->
+  <path d="M276 208H364V258C396 276 420 308 420 352V506C420 536 398 552 370 552H270C242 552 220 536 220 506V352C220 308 244 276 276 258V208Z" fill="url(#glass)" stroke="#CBB894" stroke-opacity="0.5" stroke-width="2" />
+  <path d="M238 350C238 316 258 290 282 274V238H358V274C382 290 402 316 402 350V502C402 524 386 536 364 536H276C254 536 238 524 238 502V350Z" fill="url(#cream)" />
+  <rect x="282" y="166" width="76" height="56" rx="12" fill="#F4EBD8" stroke="#CBB894" stroke-opacity="0.5" stroke-width="2" />
+  <rect x="270" y="140" width="100" height="40" rx="14" fill="url(#cap)" />
+  <rect x="280" y="148" width="80" height="6" rx="3" fill="#F3D28D" opacity="0.55" />
+  <path d="M294 180V206" stroke="#FFFDF5" stroke-opacity="0.7" stroke-width="5" stroke-linecap="round" />
+  <path d="M248 350C248 328 258 308 272 294" stroke="#FFFFFF" stroke-opacity="0.65" stroke-width="9" stroke-linecap="round" />
+
+  <!-- label -->
+  <rect x="248" y="350" width="144" height="126" rx="14" fill="url(#label)" />
+  <rect x="255" y="357" width="130" height="112" rx="10" stroke="#D9C9A3" stroke-opacity="0.38" stroke-width="1" />
+  <path d="M320 366C325 372 328 376.5 328 380.4C328 384.8 324.4 388 320 388C315.6 388 312 384.8 312 380.4C312 376.5 315 372 320 366Z" fill="#F0DDB6" />
+  <text x="320" y="416" text-anchor="middle" font-family="Georgia, serif" font-size="23" letter-spacing="3" fill="#FBF5E6">BALAI</text>
+  <path d="M280 428H360" stroke="#F0DDB6" stroke-opacity="0.45" stroke-width="1" />
+  <text x="320" y="445" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="8.5" font-weight="700" letter-spacing="1.9" fill="#E9DBBC">FRESH CREAM</text>
+  <text x="320" y="464" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="9.5" letter-spacing="1.5" fill="#D8C7A2">250 g · CHILLED</text>
+
+  <!-- dollop + saucer -->
+  <ellipse cx="474" cy="524" rx="76" ry="18" fill="#EFE2C9" />
+  <ellipse cx="474" cy="520" rx="62" ry="13" fill="#E2D2B2" />
+  <path d="M440 504C440 470 452 448 474 448C496 448 510 470 510 498C510 514 494 522 474 522C454 522 440 516 440 504Z" fill="url(#dollop)" />
+  <path d="M456 506C452 484 460 466 476 460" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="6" stroke-linecap="round" />
+  <path d="M474 492C466 484 468 472 478 466C488 460 500 466 502 478C504 490 494 500 482 500" stroke="#E7D9BD" stroke-width="2.2" stroke-linecap="round" />
+  <path d="M474 434C482 442 486 449 486 455C486 462 481 467 474 467C467 467 462 462 462 455C462 449 466 442 474 434Z" fill="url(#dollop)" stroke="#EFE2C9" stroke-width="1.5" />
+
+  <g fill="#FFF8E4">
+    <path d="M150 320L153 328.5L161.5 331.5L153 334.5L150 343L147 334.5L138.5 331.5L147 328.5L150 320Z" />
+    <path d="M500 300L502.5 307L509.5 309.5L502.5 312L500 319L497.5 312L490.5 309.5L497.5 307L500 300Z" opacity="0.85" />
+  </g>
+</svg>

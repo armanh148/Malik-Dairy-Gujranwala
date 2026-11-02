@@ -1,0 +1,83 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 330) rotate(90) scale(240)">
+      <stop stop-color="#DFB17A" stop-opacity="0.3" />
+      <stop offset="1" stop-color="#DFB17A" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="pot" x1="184" y1="400" x2="456" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C97A4E" />
+      <stop offset="0.5" stop-color="#AD5A34" />
+      <stop offset="1" stop-color="#7F3A1F" />
+    </linearGradient>
+    <linearGradient id="rim" x1="190" y1="356" x2="450" y2="412" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DA8F5E" />
+      <stop offset="1" stop-color="#B25A32" />
+    </linearGradient>
+    <linearGradient id="dahi" x1="240" y1="356" x2="400" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFDF7" />
+      <stop offset="0.6" stop-color="#FAF4E6" />
+      <stop offset="1" stop-color="#EEE3CD" />
+    </linearGradient>
+    <linearGradient id="wood" x1="430" y1="300" x2="410" y2="480" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C08A50" />
+      <stop offset="1" stop-color="#8B5A2B" />
+    </linearGradient>
+    <linearGradient id="cloth" x1="170" y1="505" x2="490" y2="592" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F3E5C9" />
+      <stop offset="1" stop-color="#E2CEA8" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="320" cy="330" r="238" fill="url(#halo)" />
+  <circle cx="320" cy="324" r="206" stroke="#C98A2E" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="2 11" />
+
+  <ellipse cx="320" cy="550" rx="196" ry="32" fill="url(#cloth)" />
+  <path d="M152 544C234 530 406 530 488 544" stroke="#D3BC94" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+  <ellipse cx="320" cy="548" rx="152" ry="18" fill="#4A3219" opacity="0.1" />
+
+  <!-- matka -->
+  <path d="M176 386C176 470 222 546 320 546C418 546 464 470 464 386Z" fill="url(#pot)" />
+  <path d="M200 404C204 470 232 516 268 534" stroke="#F2B68D" stroke-opacity="0.22" stroke-width="15" stroke-linecap="round" />
+  <path d="M438 414C432 468 408 510 380 530" stroke="#5E2712" stroke-opacity="0.2" stroke-width="12" stroke-linecap="round" />
+  <path d="M196 432C236 446 280 452 320 452C360 452 404 446 444 432" stroke="#7A3A20" stroke-opacity="0.18" stroke-width="2" />
+  <path d="M192 466C234 480 280 486 320 486C360 486 406 480 448 466" stroke="#7A3A20" stroke-opacity="0.12" stroke-width="2" />
+
+  <!-- rim + dahi -->
+  <ellipse cx="320" cy="386" rx="146" ry="44" fill="url(#rim)" />
+  <ellipse cx="320" cy="386" rx="132" ry="37" fill="#8E4727" />
+  <ellipse cx="320" cy="383" rx="128" ry="34" fill="url(#dahi)" />
+  <path d="M224 378C256 362 386 360 416 380C398 398 358 406 320 406C282 406 244 396 224 378Z" fill="#FFFDF7" />
+  <path d="M244 376C276 366 362 366 396 376" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="5" stroke-linecap="round" />
+  <g stroke="#E6D9C2" stroke-width="2" stroke-linecap="round" opacity="0.8">
+    <path d="M282 372C290 378 292 386 288 392" />
+    <path d="M346 370C354 376 356 384 352 390" />
+    <path d="M312 388C320 391 330 391 338 388" />
+  </g>
+  <path d="M176 386C192 420 252 442 320 442C388 442 448 420 464 386" stroke="#C4703F" stroke-width="12" stroke-linecap="round" fill="none" />
+  <path d="M176 386C192 420 252 442 320 442C388 442 448 420 464 386" stroke="#DA8F5E" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round" fill="none" />
+
+  <!-- mint -->
+  <g>
+    <path d="M348 360C362 344 382 338 398 342" stroke="#5F6E4C" stroke-width="2.5" stroke-linecap="round" />
+    <ellipse cx="382" cy="344" rx="17" ry="8" transform="rotate(-22 382 344)" fill="#7E8C59" />
+    <ellipse cx="358" cy="354" rx="14" ry="7" transform="rotate(-48 358 354)" fill="#6D7A4A" />
+    <path d="M382 344C376 348 372 353 370 358" stroke="#5F6E4C" stroke-width="1.6" stroke-linecap="round" opacity="0.7" />
+  </g>
+
+  <!-- spoon -->
+  <g>
+    <g transform="rotate(-20 400 380)">
+      <rect x="394" y="248" width="17" height="184" rx="8.5" fill="url(#wood)" />
+      <rect x="397.5" y="256" width="5" height="158" rx="2.5" fill="#DDA872" opacity="0.5" />
+      <ellipse cx="402.5" cy="446" rx="30" ry="37" fill="url(#wood)" />
+      <ellipse cx="402.5" cy="444" rx="21" ry="27" fill="#7C4C22" />
+      <ellipse cx="402.5" cy="441" rx="20" ry="25" fill="#FBF5E7" />
+      <path d="M390 438C396 431 408 431 415 438" stroke="#E6D9C2" stroke-width="2.2" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <g fill="#FFF8E4">
+    <path d="M156 306L159 314.5L167.5 317.5L159 320.5L156 329L153 320.5L144.5 317.5L153 314.5L156 306Z" />
+    <path d="M494 338L496.5 345L503.5 347.5L496.5 350L494 357L491.5 350L484.5 347.5L491.5 345L494 338Z" opacity="0.8" />
+  </g>
+</svg>

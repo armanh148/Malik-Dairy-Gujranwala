@@ -1,0 +1,85 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 330) rotate(90) scale(245)">
+      <stop stop-color="#E9C878" stop-opacity="0.32" />
+      <stop offset="1" stop-color="#E9C878" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="parchment" x1="168" y1="390" x2="480" y2="580" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAF1DD" />
+      <stop offset="1" stop-color="#EBD9B4" />
+    </linearGradient>
+    <linearGradient id="top" x1="260" y1="252" x2="380" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFBEC" />
+      <stop offset="1" stop-color="#F8EBCB" />
+    </linearGradient>
+    <linearGradient id="left" x1="210" y1="310" x2="320" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7E9C7" />
+      <stop offset="1" stop-color="#EBD7AA" />
+    </linearGradient>
+    <linearGradient id="right" x1="330" y1="360" x2="435" y2="460" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEDCAF" />
+      <stop offset="1" stop-color="#DCC28A" />
+    </linearGradient>
+    <linearGradient id="seal" x1="300" y1="292" x2="342" y2="320" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E0A845" />
+      <stop offset="1" stop-color="#B8771D" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="320" cy="330" r="242" fill="url(#halo)" />
+  <circle cx="320" cy="324" r="208" stroke="#C98A2E" stroke-opacity="0.2" stroke-width="1.5" stroke-dasharray="2 11" />
+  <ellipse cx="320" cy="556" rx="178" ry="24" fill="#4A3219" opacity="0.12" />
+
+  <!-- parchment -->
+  <path d="M142 414C186 388 252 374 320 374C392 374 466 388 500 414C524 432 516 484 492 514C456 552 380 566 310 562C238 558 166 540 146 508C128 480 124 432 142 414Z" fill="url(#parchment)" />
+  <path d="M158 500C222 520 400 522 486 500" stroke="#DCC7A1" stroke-width="2" stroke-linecap="round" opacity="0.8" />
+  <path d="M448 420C468 448 472 486 462 514" stroke="#DCC7A1" stroke-width="2" stroke-linecap="round" opacity="0.55" />
+  <path d="M180 438C172 462 174 488 184 506" stroke="#DCC7A1" stroke-width="2" stroke-linecap="round" opacity="0.55" />
+
+  <!-- butter block -->
+  <path d="M205 308L320 252L435 308L320 364L205 308Z" fill="url(#top)" stroke="#D9BF8C" stroke-width="2" stroke-linejoin="round" />
+  <path d="M205 308L320 364V476L205 420V308Z" fill="url(#left)" stroke="#D9BF8C" stroke-width="2" stroke-linejoin="round" />
+  <path d="M435 308L320 364V476L435 420V308Z" fill="url(#right)" stroke="#D1B57D" stroke-width="2" stroke-linejoin="round" />
+  <path d="M320 364V476" stroke="#C9AC72" stroke-width="1.5" opacity="0.8" />
+
+  <!-- knife ridges -->
+  <g stroke="#DDC495" stroke-width="2.4" stroke-linecap="round" opacity="0.65">
+    <path d="M228 320L228 428" />
+    <path d="M252 332L252 440" />
+    <path d="M276 344L276 452" />
+    <path d="M412 318L412 426" />
+    <path d="M388 330L388 438" />
+  </g>
+
+  <!-- wax seal -->
+  <ellipse cx="320" cy="306" rx="31" ry="17" fill="url(#seal)" />
+  <ellipse cx="320" cy="304" rx="25" ry="12.5" fill="#D79A38" />
+  <path d="M308 312V304C308 298.5 313.4 294 320 294C326.6 294 332 298.5 332 304V312" stroke="#FFF4D8" stroke-width="2.4" stroke-linecap="round" opacity="0.85" />
+  <path d="M320 300C322.4 302.8 323.6 304.8 323.6 306.6C323.6 308.8 322 310.4 320 310.4C318 310.4 316.4 308.8 316.4 306.6C316.4 304.8 317.6 302.8 320 300Z" fill="#FFF4D8" />
+
+  <!-- butter curls -->
+  <path d="M432 448C468 442 492 428 498 410C502 398 492 391 481 396C463 404 448 420 432 448Z" fill="#FFFAE8" stroke="#E0C994" stroke-width="2" stroke-linejoin="round" />
+  <path d="M438 440C456 434 472 424 482 412" stroke="#E7D4A6" stroke-width="2" stroke-linecap="round" />
+  <path d="M405 470C430 466 447 457 452 444C455 435 447 430 439 434C426 441 416 452 405 470Z" fill="#FFF9E4" stroke="#E0C994" stroke-width="2" stroke-linejoin="round" />
+
+  <!-- herb sprig -->
+  <g>
+    <path d="M228 468C210 448 200 424 198 398" stroke="#6D7A4A" stroke-width="3" stroke-linecap="round" />
+    <ellipse cx="208" cy="430" rx="16" ry="7" transform="rotate(-42 208 430)" fill="#7E8C59" />
+    <ellipse cx="199" cy="410" rx="14" ry="6" transform="rotate(-58 199 410)" fill="#6D7A4A" />
+    <ellipse cx="222" cy="450" rx="14" ry="6" transform="rotate(-24 222 450)" fill="#8A9860" />
+  </g>
+
+  <!-- salt -->
+  <g fill="#FFFDF6" stroke="#DCC7A1" stroke-width="1">
+    <circle cx="466" cy="470" r="4" />
+    <circle cx="478" cy="482" r="3.2" />
+    <circle cx="458" cy="486" r="2.8" />
+    <circle cx="486" cy="466" r="2.4" />
+  </g>
+
+  <g fill="#FFF8E4">
+    <path d="M146 356L149 364.5L157.5 367.5L149 370.5L146 379L143 370.5L134.5 367.5L143 364.5L146 356Z" />
+    <path d="M506 344L508.5 351L515.5 353.5L508.5 356L506 363L503.5 356L496.5 353.5L503.5 351L506 344Z" opacity="0.85" />
+  </g>
+</svg>

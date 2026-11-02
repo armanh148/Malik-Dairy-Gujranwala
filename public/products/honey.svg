@@ -1,0 +1,102 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="halo" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 330) rotate(90) scale(252)">
+      <stop stop-color="#EDB950" stop-opacity="0.34" />
+      <stop offset="1" stop-color="#EDB950" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="glass" x1="220" y1="260" x2="430" y2="540" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0BE5E" />
+      <stop offset="0.5" stop-color="#D3922B" />
+      <stop offset="1" stop-color="#9C5F14" />
+    </linearGradient>
+    <linearGradient id="honey" x1="240" y1="300" x2="410" y2="530" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9D487" />
+      <stop offset="0.55" stop-color="#E4A63B" />
+      <stop offset="1" stop-color="#B9761B" />
+    </linearGradient>
+    <linearGradient id="lid" x1="250" y1="186" x2="390" y2="252" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5B4228" />
+      <stop offset="0.55" stop-color="#342417" />
+      <stop offset="1" stop-color="#1C130C" />
+    </linearGradient>
+    <linearGradient id="wood" x1="420" y1="160" x2="400" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C58E52" />
+      <stop offset="1" stop-color="#8A5828" />
+    </linearGradient>
+    <linearGradient id="comb" x1="440" y1="470" x2="560" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4C86B" />
+      <stop offset="1" stop-color="#CE8B25" />
+    </linearGradient>
+    <linearGradient id="cloth" x1="170" y1="500" x2="490" y2="590" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4E6C8" />
+      <stop offset="1" stop-color="#E3CFA9" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="320" cy="330" r="250" fill="url(#halo)" />
+  <circle cx="320" cy="322" r="212" stroke="#C98A2E" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="2 11" />
+
+  <ellipse cx="320" cy="558" rx="182" ry="26" fill="url(#cloth)" />
+  <path d="M160 548C230 536 410 536 480 548" stroke="#D6BF97" stroke-width="2" stroke-linecap="round" opacity="0.7" />
+  <ellipse cx="320" cy="554" rx="140" ry="16" fill="#4A3219" opacity="0.1" />
+
+  <!-- jar -->
+  <path d="M220 268C220 246 238 232 262 228H378C402 232 420 246 420 268V502C420 532 396 548 366 548H274C244 548 220 532 220 502V268Z" fill="url(#glass)" stroke="#83520F" stroke-opacity="0.35" stroke-width="2" />
+  <path d="M236 290C236 274 250 264 268 260H372C390 264 404 274 404 290V494C404 518 386 532 362 532H278C254 532 236 518 236 494V290Z" fill="url(#honey)" />
+  <ellipse cx="320" cy="292" rx="84" ry="17" fill="#FBE1A4" opacity="0.8" />
+  <path d="M244 320C240 372 240 434 250 486" stroke="#FFF0C8" stroke-opacity="0.4" stroke-width="12" stroke-linecap="round" />
+  <path d="M396 330C400 380 400 430 394 470" stroke="#FFF0C8" stroke-opacity="0.22" stroke-width="7" stroke-linecap="round" />
+
+  <!-- lid -->
+  <rect x="238" y="188" width="164" height="58" rx="18" fill="url(#lid)" />
+  <rect x="238" y="232" width="164" height="12" rx="6" fill="#C98A2E" />
+  <rect x="252" y="198" width="136" height="8" rx="4" fill="#7A5A38" opacity="0.5" />
+  <g opacity="0.16" stroke="#F5DEB5" stroke-width="2" stroke-linecap="round">
+    <path d="M262 208V228" /><path d="M286 208V228" /><path d="M310 208V228" />
+    <path d="M334 208V228" /><path d="M358 208V228" /><path d="M382 208V228" />
+  </g>
+
+  <!-- label -->
+  <rect x="243" y="342" width="154" height="136" rx="14" fill="#FFFBF1" stroke="#DCC9A6" stroke-width="1.5" />
+  <path d="M320 354L336 363V381L320 390L304 381V363L320 354Z" fill="#E2A63C" />
+  <path d="M320 361L328 365.5V376L320 380.5L312 376V365.5L320 361Z" fill="#FFF7E3" opacity="0.85" />
+  <text x="320" y="416" text-anchor="middle" font-family="Georgia, serif" font-size="24" letter-spacing="4" fill="#2B1D13">SIDR</text>
+  <path d="M276 428H364" stroke="#C98A2E" stroke-opacity="0.5" stroke-width="1" />
+  <text x="320" y="446" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="9" font-weight="700" letter-spacing="2.1" fill="#7A5B35">RAW HONEY</text>
+  <text x="320" y="467" text-anchor="middle" font-family="Manrope, Arial, sans-serif" font-size="10" letter-spacing="1.6" fill="#A98A5C">500 g · UNFILTERED</text>
+
+  <!-- honey dipper -->
+  <g>
+    <g transform="rotate(24 410 260)">
+      <rect x="398" y="150" width="16" height="188" rx="8" fill="url(#wood)" />
+      <rect x="401.5" y="158" width="5" height="164" rx="2.5" fill="#DDA872" opacity="0.5" />
+      <ellipse cx="406" cy="356" rx="27" ry="14" fill="#A9702F" />
+      <ellipse cx="406" cy="344" rx="24" ry="12" fill="#C08A45" />
+      <ellipse cx="406" cy="332" rx="20" ry="10" fill="#C08A45" />
+      <ellipse cx="406" cy="320" rx="15" ry="8" fill="#D8A25C" />
+      <path d="M382 350H430" stroke="#8A5828" stroke-opacity="0.5" stroke-width="2" />
+      <path d="M386 336H426" stroke="#8A5828" stroke-opacity="0.45" stroke-width="2" />
+      <ellipse cx="406" cy="366" rx="16" ry="6" fill="#F2C56A" opacity="0.9" />
+    </g>
+    <!-- honey drizzle -->
+    <path d="M414 384C408 404 418 418 404 436C396 446 400 458 408 464" stroke="#E4A63B" stroke-width="8" stroke-linecap="round" />
+    <ellipse cx="409" cy="472" rx="7" ry="10" fill="#E4A63B" />
+    <path d="M405 470C405 469 405 469 405 469" stroke="#F9D487" stroke-width="3" stroke-linecap="round" />
+    <ellipse cx="407" cy="469" rx="2.5" ry="4" fill="#FBDFA0" />
+  </g>
+
+  <!-- honeycomb -->
+  <g opacity="0.95">
+    <path d="M470 476L485 467L500 476V494L485 503L470 494V476Z" fill="url(#comb)" stroke="#B8771D" stroke-width="2" />
+    <path d="M508 462L523 453L538 462V480L523 489L508 480V462Z" fill="url(#comb)" stroke="#B8771D" stroke-width="2" />
+    <path d="M498 506L513 497L528 506V524L513 533L498 524V506Z" fill="url(#comb)" stroke="#B8771D" stroke-width="2" />
+    <path d="M485 476L485 494M470 485H500" stroke="#B8771D" stroke-opacity="0.3" stroke-width="1.5" />
+    <path d="M523 471L523 480M508 471H538" stroke="#B8771D" stroke-opacity="0.3" stroke-width="1.5" />
+    <path d="M513 515L513 524M498 515H528" stroke="#B8771D" stroke-opacity="0.3" stroke-width="1.5" />
+  </g>
+
+  <g fill="#FFF8E4">
+    <path d="M158 300L161 308.5L169.5 311.5L161 314.5L158 323L155 314.5L146.5 311.5L155 308.5L158 300Z" />
+    <path d="M508 246L510.5 253L517.5 255.5L510.5 258L508 265L505.5 258L498.5 255.5L505.5 253L508 246Z" opacity="0.8" />
+  </g>
+</svg>
