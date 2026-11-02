@@ -106,34 +106,34 @@ export function WorkflowSection() {
             </div>
           </div>
 
-          {/* Right Column: 4 Clean Process Step Rows (7 Cols) */}
+          {/* Right Column: 4 Clean Process Step Cards (2 in one row) */}
           <div className="lg:col-span-7">
-            <div className="space-y-1 sm:space-y-2">
+            <div className="grid grid-cols-2 gap-2.5 sm:gap-4.5">
               {steps.map((item, idx) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={idx}
-                    className="group relative flex items-start gap-3.5 rounded-2xl sm:rounded-3xl p-3 sm:p-5 transition-all duration-300 hover:bg-[#faf9f5] hover:shadow-[0_10px_30px_rgba(12,36,21,0.05)] sm:gap-5"
+                    className="group relative flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-[#0c2415]/10 bg-[#faf9f5] p-3 sm:p-5 transition-all duration-300 hover:bg-white hover:border-[#43a047] hover:shadow-[0_12px_30px_rgba(12,36,21,0.08)] hover:-translate-y-1 cursor-pointer"
                   >
-                    {/* Icon Container with Hover Animation */}
-                    <div className="relative shrink-0">
-                      <span className="grid size-11 sm:size-14 place-items-center rounded-xl sm:rounded-2xl border border-[#43a047]/30 bg-[#e8f5e9] text-[#2e7d32] shadow-xs transition-all duration-300 group-hover:bg-[#43a047] group-hover:text-white group-hover:scale-105 group-hover:shadow-md">
-                        <Icon className="size-5 sm:size-7" strokeWidth={1.85} />
-                      </span>
-                    </div>
-
-                    {/* Step Information */}
-                    <div className="flex-1 min-w-0 border-b border-[#0c2415]/10 pb-4 sm:pb-6 group-last:border-none group-last:pb-0">
-                      <div className="flex items-center justify-between gap-2 sm:gap-3">
-                        <h3 className="font-display text-[15px] sm:text-[18px] font-bold text-[#0c2415] transition-colors duration-300 group-hover:text-[#2e7d32]">
-                          {item.title}
-                        </h3>
-                        <span className="shrink-0 rounded-full bg-[#e8f5e9] px-2 py-0.5 text-[9.5px] sm:text-[10.5px] font-extrabold uppercase tracking-wider text-[#2e7d32] transition-colors group-hover:bg-[#43a047] group-hover:text-white">
+                    <div>
+                      {/* Top row: Icon + Step Badge */}
+                      <div className="flex items-center justify-between gap-1.5">
+                        <span className="grid size-9 sm:size-12 shrink-0 place-items-center rounded-xl sm:rounded-2xl border border-[#43a047]/30 bg-[#e8f5e9] text-[#2e7d32] shadow-xs transition-all duration-300 group-hover:bg-[#43a047] group-hover:text-white group-hover:scale-105">
+                          <Icon className="size-4.5 sm:size-6" strokeWidth={1.85} />
+                        </span>
+                        <span className="shrink-0 rounded-full bg-[#e8f5e9] px-2 py-0.5 text-[8.5px] sm:text-[10px] font-extrabold uppercase tracking-wider text-[#2e7d32] transition-colors group-hover:bg-[#43a047] group-hover:text-white">
                           Step {item.step}
                         </span>
                       </div>
-                      <p className="mt-1 sm:mt-2 text-xs sm:text-[13.5px] leading-relaxed text-[#385342]">
+
+                      {/* Title */}
+                      <h3 className="mt-2.5 sm:mt-3 font-display text-[13px] sm:text-[17px] font-bold leading-snug text-[#0c2415] transition-colors duration-300 group-hover:text-[#2e7d32]">
+                        {item.title}
+                      </h3>
+
+                      {/* Description */}
+                      <p className="mt-1 sm:mt-1.5 text-[10.5px] sm:text-[12.5px] leading-relaxed text-[#385342]">
                         {item.description}
                       </p>
                     </div>
