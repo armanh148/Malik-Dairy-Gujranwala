@@ -22,7 +22,7 @@ export function StorySection() {
               <div className="absolute -inset-3.5 rounded-[3rem] border-2 border-dashed border-[#43a047]/30 sm:-inset-4" />
 
               {/* Main Primary Photo: Organic Farmer with Fresh Tomatoes Harvest */}
-              <div className="relative z-10 aspect-[4/3.8] w-full overflow-hidden rounded-[2.2rem] border-2 border-white/15 bg-[#0c2415] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
+              <div className="relative z-10 aspect-[4/4.3] w-full overflow-hidden rounded-[2.5rem] border-2 border-white/15 bg-[#0c2415] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://plus.unsplash.com/premium_photo-1678344151150-4a42c45453d5?auto=format&fit=crop&w=1000&q=80"
@@ -39,47 +39,47 @@ export function StorySection() {
                 </div>
               </div>
 
-              {/* Overlapping Golden Experience Badge */}
-              <div className="relative -mt-10 mr-3 ml-auto z-20 w-[90%] max-w-[320px] rounded-3xl border-2 border-[#ffe082] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-4 text-[#07190e] shadow-[0_20px_45px_rgba(245,182,26,0.45)] transition-transform duration-300 hover:scale-105 sm:-mt-12 sm:mr-5 sm:p-5">
-                <div className="flex items-center gap-3.5">
-                  <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#07190e] text-[#f5b61a] shadow-md ring-2 ring-white/20">
-                    <Award className="size-6.5" />
+              {/* Bottom Row Overlapping Main Image: Small Landscape Photo + 20+ Years Yellow Badge Side-by-Side */}
+              <div className="relative -mt-16 sm:-mt-20 z-20 px-2 sm:px-3 flex items-stretch gap-3 sm:gap-4">
+                
+                {/* Small Landscape Photo (Overlapping Main Image Beside 20+ Year Badge) */}
+                <div className="group relative aspect-[16/11] w-[45%] shrink-0 overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-white/25 bg-[#0c2415] shadow-[0_22px_45px_rgba(0,0,0,0.7)] transition-transform duration-300 hover:scale-105">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80"
+                    alt="Tractor cultivating fertile Punjab fields"
+                    loading="lazy"
+                    className="size-full object-cover transition duration-700 hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#07190e]/80 via-transparent to-transparent" />
+                  <span className="absolute bottom-2 left-2.5 inline-flex items-center gap-1 rounded-full bg-black/50 px-2 py-0.5 text-[9px] font-bold text-white backdrop-blur-md sm:text-[10px]">
+                    <span className="size-1.5 rounded-full bg-[#43a047] animate-pulse" />
+                    Pasture Farm
                   </span>
-                  <div>
-                    <div className="flex items-baseline gap-1">
-                      <span className="font-display text-2xl font-black leading-none sm:text-3xl">
-                        20+
-                      </span>
-                      <span className="text-xs font-black uppercase tracking-wider">
-                        Years
-                      </span>
+                </div>
+
+                {/* Overlapping Golden Experience Badge Level with it */}
+                <div className="flex-1 flex flex-col justify-center rounded-2xl sm:rounded-3xl border-2 border-[#ffe082] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-3 sm:p-4 text-[#07190e] shadow-[0_22px_45px_rgba(245,182,26,0.45)] transition-transform duration-300 hover:scale-105">
+                  <div className="flex items-center gap-2.5 sm:gap-3">
+                    <span className="grid size-9 sm:size-11 shrink-0 place-items-center rounded-xl sm:rounded-2xl bg-[#07190e] text-[#f5b61a] shadow-md ring-2 ring-white/20">
+                      <Award className="size-5 sm:size-6" />
+                    </span>
+                    <div className="min-w-0">
+                      <div className="flex items-baseline gap-1">
+                        <span className="font-display text-xl sm:text-2xl font-black leading-none">
+                          20+
+                        </span>
+                        <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider">
+                          Years
+                        </span>
+                      </div>
+                      <p className="mt-0.5 text-[10px] sm:text-[11px] font-extrabold leading-tight text-[#07190e]/95 line-clamp-2">
+                        There are 20+ years of agriculture experience in our farm
+                      </p>
                     </div>
-                    <p className="mt-1 text-[11.5px] font-extrabold leading-snug text-[#07190e]/95">
-                      There are 20+ years of agriculture experience in our farm
-                    </p>
                   </div>
                 </div>
-              </div>
 
-              {/* Secondary Landscape Photo: Tractor in Green Farm Pastures */}
-              <div className="relative mt-4 aspect-[16/8.8] w-full overflow-hidden rounded-[2.2rem] border-2 border-white/15 bg-[#0c2415] shadow-[0_25px_60px_rgba(0,0,0,0.65)]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1000&q=80"
-                  alt="Tractor cultivating fertile Punjab fields"
-                  loading="lazy"
-                  className="size-full object-cover transition duration-700 hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#07190e]/80 via-[#07190e]/20 to-transparent" />
-                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-bold text-white">
-                  <span className="flex items-center gap-2 text-[#86efac]">
-                    <span className="size-2 rounded-full bg-[#43a047] animate-pulse" />
-                    Lush Green Gujranwala Pastures
-                  </span>
-                  <span className="rounded-full bg-white/20 px-3 py-1 text-[10px] backdrop-blur-md">
-                    Est. 1987
-                  </span>
-                </div>
               </div>
 
             </div>
