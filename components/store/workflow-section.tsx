@@ -69,8 +69,8 @@ export function WorkflowSection() {
               <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] border border-[#0c2415]/10 bg-[#f7f8f6] shadow-[0_20px_50px_rgba(12,36,21,0.12)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1594488518001-447a1bf64c58?auto=format&fit=crop&w=900&q=80"
-                  alt="Smiling female farmer holding fresh harvest cabbage basket"
+                  src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1000&q=80"
+                  alt="Smiling farmer holding fresh organic harvest vegetables"
                   loading="lazy"
                   className="size-full object-cover object-center transition duration-700 hover:scale-105"
                 />

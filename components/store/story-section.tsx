@@ -14,67 +14,69 @@ export function StorySection() {
       <div className="relative mx-auto max-w-[1600px] px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-16 xl:gap-20">
           
-          {/* Left Column: Authentic Multi-Layered Farm Collage (5 Cols) */}
+          {/* Left Column: Authentic Clean Stacked Farm Collage (5 Cols) */}
           <div className="lg:col-span-6 xl:col-span-5">
-            <div className="relative mx-auto max-w-[520px] lg:max-w-none">
+            <div className="relative mx-auto max-w-[500px] lg:max-w-none">
               
               {/* Outer decorative dashed frame border */}
               <div className="absolute -inset-3.5 rounded-[3rem] border-2 border-dashed border-[#43a047]/30 sm:-inset-4" />
 
-              {/* Main Primary Photo: Organic Farmer with Fresh Produce Crate */}
-              <div className="relative z-10 aspect-[4/4.3] w-[86%] overflow-hidden rounded-[2.5rem] border-2 border-white/15 bg-[#0c2415] shadow-[0_30px_70px_rgba(0,0,0,0.6)]">
+              {/* Main Primary Photo: Organic Farmer with Fresh Tomatoes Harvest */}
+              <div className="relative z-10 aspect-[4/3.8] w-full overflow-hidden rounded-[2.2rem] border-2 border-white/15 bg-[#0c2415] shadow-[0_25px_60px_rgba(0,0,0,0.6)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=1000&q=80"
-                  alt="Organic farmer holding fresh harvest crate"
+                  src="https://plus.unsplash.com/premium_photo-1678344151150-4a42c45453d5?auto=format&fit=crop&w=1000&q=80"
+                  alt="Organic farmer holding fresh tomato harvest basket in field"
                   loading="lazy"
                   className="size-full object-cover object-center transition duration-700 hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#07190e]/85 via-transparent to-transparent opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#07190e]/75 via-transparent to-transparent opacity-60" />
 
                 {/* Floating Top Leaf Tag */}
-                <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#07190e]/80 px-3.5 py-1.5 text-[11px] font-bold text-[#86efac] backdrop-blur-md shadow-md">
+                <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#07190e]/85 px-3.5 py-1.5 text-[11px] font-bold text-[#86efac] backdrop-blur-md shadow-md">
                   <Sparkles className="size-3 text-[#f5b61a]" />
-                  <span>100% Gujranwala Harvest</span>
+                  <span>100% Organic Produce</span>
                 </div>
               </div>
 
               {/* Overlapping Golden Experience Badge */}
-              <div className="absolute right-0 top-[34%] z-20 w-[62%] max-w-[270px] rounded-3xl border-2 border-[#ffe082] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-4 text-[#07190e] shadow-[0_22px_50px_rgba(245,182,26,0.45)] transition-transform duration-300 hover:scale-105 sm:p-5">
-                <div className="flex items-start gap-3">
-                  <span className="grid size-11 shrink-0 place-items-center rounded-2xl bg-[#07190e] text-[#f5b61a] shadow-md ring-2 ring-white/20 sm:size-12">
-                    <Award className="size-6" />
+              <div className="relative -mt-10 mr-3 ml-auto z-20 w-[90%] max-w-[320px] rounded-3xl border-2 border-[#ffe082] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-4 text-[#07190e] shadow-[0_20px_45px_rgba(245,182,26,0.45)] transition-transform duration-300 hover:scale-105 sm:-mt-12 sm:mr-5 sm:p-5">
+                <div className="flex items-center gap-3.5">
+                  <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#07190e] text-[#f5b61a] shadow-md ring-2 ring-white/20">
+                    <Award className="size-6.5" />
                   </span>
                   <div>
-                    <span className="font-display text-2xl font-black leading-none sm:text-3xl">
-                      20+
-                    </span>
-                    <span className="ml-1 text-xs font-black uppercase tracking-wider">
-                      Years
-                    </span>
-                    <p className="mt-1 text-[11px] font-extrabold leading-tight text-[#07190e]/95 sm:text-xs">
+                    <div className="flex items-baseline gap-1">
+                      <span className="font-display text-2xl font-black leading-none sm:text-3xl">
+                        20+
+                      </span>
+                      <span className="text-xs font-black uppercase tracking-wider">
+                        Years
+                      </span>
+                    </div>
+                    <p className="mt-1 text-[11.5px] font-extrabold leading-snug text-[#07190e]/95">
                       There are 20+ years of agriculture experience in our farm
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* Overlapping Secondary Photo: Tractor Plowing in Golden Mist Fields */}
-              <div className="relative -mt-16 ml-auto z-10 aspect-[16/10] w-[72%] overflow-hidden rounded-[2.2rem] border-2 border-white/20 bg-[#0c2415] shadow-[0_25px_60px_rgba(0,0,0,0.65)] sm:-mt-20">
+              {/* Secondary Landscape Photo: Tractor in Green Farm Pastures */}
+              <div className="relative mt-4 aspect-[16/8.8] w-full overflow-hidden rounded-[2.2rem] border-2 border-white/15 bg-[#0c2415] shadow-[0_25px_60px_rgba(0,0,0,0.65)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=800&q=80"
-                  alt="Tractor working in lush green farm pastures"
+                  src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=1000&q=80"
+                  alt="Tractor cultivating fertile Punjab fields"
                   loading="lazy"
                   className="size-full object-cover transition duration-700 hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#07190e]/80 via-[#07190e]/20 to-transparent" />
-                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-[11px] font-bold text-white">
-                  <span className="flex items-center gap-1.5 text-[#86efac]">
+                <div className="absolute bottom-3 left-4 right-4 flex items-center justify-between text-xs font-bold text-white">
+                  <span className="flex items-center gap-2 text-[#86efac]">
                     <span className="size-2 rounded-full bg-[#43a047] animate-pulse" />
-                    Natural Organic Pasture
+                    Lush Green Gujranwala Pastures
                   </span>
-                  <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-[9.5px] backdrop-blur-md">
+                  <span className="rounded-full bg-white/20 px-3 py-1 text-[10px] backdrop-blur-md">
                     Est. 1987
                   </span>
                 </div>
