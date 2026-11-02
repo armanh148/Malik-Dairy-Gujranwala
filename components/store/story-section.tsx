@@ -105,35 +105,35 @@ export function StorySection() {
               For over two decades, Malik Dairy has led natural cattle farming, sustainable agriculture, and pure artisanal dairy production in Gujranwala. We hold every harvest to the highest benchmark of purity, honest nutrition, and rich traditional taste.
             </p>
 
-            {/* 2 Bullet Feature Items (Matching Reference Image Style) */}
-            <div className="mt-6 sm:mt-9 space-y-4 sm:space-y-6">
+            {/* 2 Bullet Feature Items in 1 Row (Grid of 2) */}
+            <div className="mt-6 sm:mt-9 grid grid-cols-2 gap-2.5 sm:gap-5">
               
               {/* Feature 1 */}
-              <div className="group flex items-start gap-3 sm:gap-4 rounded-2xl p-1.5 sm:p-2 transition-all duration-300 hover:translate-x-1.5">
-                <span className="grid size-9 sm:size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20 transition-transform duration-300 group-hover:scale-110">
-                  <Check className="size-4.5 sm:size-5" strokeWidth={3} />
+              <div className="group flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3.5 rounded-2xl border border-white/10 bg-white/5 p-3 sm:p-4 transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
+                <span className="grid size-8 sm:size-10 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-2 ring-[#43a047]/30 transition-transform duration-300 group-hover:scale-110">
+                  <Check className="size-4 sm:size-5" strokeWidth={3} />
                 </span>
-                <div>
-                  <h3 className="font-display text-[15px] sm:text-[17px] font-bold text-white transition-colors duration-300 group-hover:text-[#86efac]">
+                <div className="min-w-0">
+                  <h3 className="font-display text-[13px] sm:text-[16px] font-bold leading-snug text-white transition-colors duration-300 group-hover:text-[#86efac]">
                     100% Guaranteed Organic Product
                   </h3>
-                  <p className="mt-0.5 sm:mt-1 text-xs sm:text-[13.5px] leading-relaxed text-white/75">
-                    Our herds feed on natural green alfalfa and clover pastures with zero synthetic hormones, chemical feeds, or industrial fillers.
+                  <p className="mt-1 text-[10.5px] sm:text-[13px] leading-relaxed text-white/75">
+                    Our herds feed on natural green alfalfa and clover pastures with zero synthetic hormones or fillers.
                   </p>
                 </div>
               </div>
 
               {/* Feature 2 */}
-              <div className="group flex items-start gap-3 sm:gap-4 rounded-2xl p-1.5 sm:p-2 transition-all duration-300 hover:translate-x-1.5">
-                <span className="grid size-9 sm:size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20 transition-transform duration-300 group-hover:scale-110">
-                  <Check className="size-4.5 sm:size-5" strokeWidth={3} />
+              <div className="group flex flex-col sm:flex-row items-start gap-2.5 sm:gap-3.5 rounded-2xl border border-white/10 bg-white/5 p-3 sm:p-4 transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
+                <span className="grid size-8 sm:size-10 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-2 ring-[#43a047]/30 transition-transform duration-300 group-hover:scale-110">
+                  <Check className="size-4 sm:size-5" strokeWidth={3} />
                 </span>
-                <div>
-                  <h3 className="font-display text-[15px] sm:text-[17px] font-bold text-white transition-colors duration-300 group-hover:text-[#86efac]">
+                <div className="min-w-0">
+                  <h3 className="font-display text-[13px] sm:text-[16px] font-bold leading-snug text-white transition-colors duration-300 group-hover:text-[#86efac]">
                     Top-Quality Healthy Food Production
                   </h3>
-                  <p className="mt-0.5 sm:mt-1 text-xs sm:text-[13.5px] leading-relaxed text-white/75">
-                    Slow copper-kettle simmered pure desi ghee, chilled fresh milk, and laboratory-verified microbiological density standards.
+                  <p className="mt-1 text-[10.5px] sm:text-[13px] leading-relaxed text-white/75">
+                    Slow copper-kettle simmered pure desi ghee, chilled fresh milk, and verified purity standards.
                   </p>
                 </div>
               </div>
