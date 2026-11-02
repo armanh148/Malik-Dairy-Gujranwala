@@ -79,28 +79,27 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
         ) : null}
       </div>
 
-      <div className="flex flex-1 flex-col px-4 pb-4 pt-0.5">
-        <div className="flex items-start justify-between gap-3">
-          <div>
-            <h3 className="font-display text-[1.08rem] font-semibold leading-tight tracking-[-0.02em] text-ink">
+      <div className="flex flex-1 flex-col p-3.5 pt-0.5">
+        <div className="flex items-start justify-between gap-2">
+          <div className="min-w-0">
+            <h3 className="font-display text-[1rem] font-bold leading-tight tracking-[-0.02em] text-ink truncate">
               {product.name}
             </h3>
-            <p lang="ur" className="font-urdu mt-1 text-[11px] leading-[1.9] text-ink-faint">
+            <p lang="ur" className="font-urdu mt-0.5 text-[10.5px] leading-[1.8] text-ink-faint">
               {product.urdu}
             </p>
           </div>
-          <span className="mt-0.5 inline-flex shrink-0 items-center gap-1 text-[11px] font-bold text-ink">
-            <Star className="size-3.5 fill-gold text-gold" strokeWidth={1.5} />
+          <span className="mt-0.5 inline-flex shrink-0 items-center gap-1 text-[10.5px] font-bold text-ink">
+            <Star className="size-3 fill-gold text-gold" strokeWidth={1.5} />
             {product.rating}
-            <span className="font-medium text-ink-faint">({product.reviews})</span>
           </span>
         </div>
 
-        <p className="mt-2.5 line-clamp-2 min-h-[32px] text-[11.5px] leading-relaxed text-ink-soft">
+        <p className="mt-2 line-clamp-2 min-h-[30px] text-[11px] leading-relaxed text-ink-soft">
           {product.blurb}
         </p>
 
-        <div className="mt-3 flex flex-wrap items-center gap-1.5">
+        <div className="mt-3 flex flex-wrap items-center gap-1">
           {product.variants.map((item) => {
             const active = item.id === variantId;
             const itemStock = stockOf(product.id, item.id);
@@ -112,7 +111,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
                 aria-pressed={active}
                 aria-label={`Select ${item.label}`}
                 className={cn(
-                  "relative rounded-full border px-3 py-1 text-[11px] font-bold transition",
+                  "relative rounded-full border px-2.5 py-0.5 text-[10px] font-bold transition",
                   active
                     ? "border-[#43a047] bg-[#e8f5e9] text-[#2e7d32]"
                     : "border-line text-ink-faint hover:border-line-strong hover:text-ink-soft",
@@ -120,61 +119,61 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
                 )}
               >
                 {item.label}
-                {itemStock <= 0 ? <span className="ml-1 text-[9px]">sold out</span> : null}
+                {itemStock <= 0 ? <span className="ml-1 text-[8.5px]">sold out</span> : null}
               </button>
             );
           })}
         </div>
 
-        <div className="mt-auto flex items-end justify-between gap-2 pt-4">
-          <div>
-            <div className="flex items-baseline gap-1.5">
-              <span className="tnum font-display text-[1.25rem] font-bold leading-none text-[#0c2415]">
+        <div className="mt-auto flex items-end justify-between gap-1.5 pt-3.5">
+          <div className="min-w-0">
+            <div className="flex items-baseline gap-1">
+              <span className="tnum font-display text-[1.15rem] font-bold leading-none text-[#0c2415]">
                 {formatPKR(variant.price)}
               </span>
               {variant.compareAt ? (
-                <span className="tnum text-[10.5px] font-medium text-ink-faint line-through">
+                <span className="tnum text-[10px] font-medium text-ink-faint line-through">
                   {formatPKR(variant.compareAt)}
                 </span>
               ) : null}
             </div>
             <p
               className={cn(
-                "mt-1.5 text-[9.5px] font-bold uppercase tracking-[0.08em]",
+                "mt-1 text-[9px] font-bold uppercase tracking-[0.06em] truncate",
                 soldOut ? "text-danger" : low ? "text-terracotta" : "text-[#2e7d32]",
               )}
             >
-              {soldOut ? "Sold out" : low ? "Almost gone" : "In stock · fresh batch"}
+              {soldOut ? "Sold out" : low ? "Almost gone" : "In stock · fresh"}
             </p>
           </div>
 
-          <div className="flex items-center gap-1.5">
+          <div className="flex shrink-0 items-center gap-1">
             <a
               href={waHref}
               target="_blank"
               rel="noreferrer"
               aria-label={`Order ${product.name} on WhatsApp`}
-              className="grid size-9 place-items-center rounded-full border border-line bg-surface-2 text-wa transition hover:border-wa/40 hover:bg-wa/10"
+              className="grid size-8 place-items-center rounded-full border border-line bg-surface-2 text-wa transition hover:border-wa/40 hover:bg-wa/10"
             >
-              <WhatsAppIcon className="size-4" />
+              <WhatsAppIcon className="size-3.5" />
             </a>
             <button
               type="button"
               onClick={handleAdd}
               disabled={soldOut}
               className={cn(
-                "inline-flex h-9 items-center gap-1.5 rounded-full px-4 text-xs font-bold transition-all shadow-sm active:scale-[0.97]",
+                "inline-flex h-8 items-center gap-1 rounded-full px-2.5 text-[10.5px] font-bold transition-all shadow-sm active:scale-[0.97]",
                 justAdded
                   ? "bg-[#2e7d32] text-white"
                   : "bg-[#43a047] text-white hover:bg-[#388e3c] disabled:cursor-not-allowed disabled:bg-surface-3 disabled:text-ink-faint",
               )}
             >
               {justAdded ? (
-                <Check className="size-3.5" strokeWidth={3} />
+                <Check className="size-3" strokeWidth={3} />
               ) : (
-                <Plus className="size-3.5" strokeWidth={3} />
+                <Plus className="size-3" strokeWidth={3} />
               )}
-              {soldOut ? "Sold out" : justAdded ? "Added" : "Add to Cart"}
+              {soldOut ? "Sold" : justAdded ? "Added" : "Add to Cart"}
             </button>
           </div>
         </div>
