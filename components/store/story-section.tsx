@@ -140,24 +140,24 @@ export function StorySection() {
 
             </div>
 
-            {/* CTA Buttons */}
-            <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
+            {/* CTA Buttons in 1 Row */}
+            <div className="mt-7 sm:mt-10 flex items-center gap-2.5 sm:gap-4">
               <Link
                 href="/#services"
-                className="shimmer-btn group inline-flex justify-center items-center gap-3 rounded-full bg-[#43a047] px-7 py-3.5 sm:px-8 sm:py-4 text-xs font-bold uppercase tracking-widest text-white shadow-[0_12px_28px_-5px_rgba(67,160,71,0.55)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-1 active:scale-95"
+                className="shimmer-btn group inline-flex flex-1 sm:flex-initial justify-center items-center gap-2 sm:gap-3 rounded-full bg-[#43a047] px-3.5 py-3 sm:px-8 sm:py-4 text-[11px] sm:text-xs font-bold uppercase tracking-wider sm:tracking-widest text-white shadow-[0_12px_28px_-5px_rgba(67,160,71,0.55)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-1 active:scale-95 whitespace-nowrap"
               >
                 <span>Discover More</span>
-                <span className="grid size-6 place-items-center rounded-full bg-white/20 transition-transform duration-300 group-hover:translate-x-1">
-                  <ArrowRight className="size-3.5" />
+                <span className="grid size-5 sm:size-6 shrink-0 place-items-center rounded-full bg-white/20 transition-transform duration-300 group-hover:translate-x-1">
+                  <ArrowRight className="size-3 sm:size-3.5" />
                 </span>
               </Link>
 
               <Link
                 href="/#products"
-                className="inline-flex justify-center items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3.5 sm:py-4 text-xs font-bold uppercase tracking-wider text-white transition hover:border-[#f5b61a] hover:text-[#f5b61a]"
+                className="inline-flex flex-1 sm:flex-initial justify-center items-center gap-1.5 sm:gap-2 rounded-full border border-white/20 bg-white/5 px-3.5 py-3 sm:px-7 sm:py-4 text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:border-[#f5b61a] hover:text-[#f5b61a] hover:-translate-y-1 active:scale-95 whitespace-nowrap"
               >
                 <span>Explore Pantry</span>
-                <ArrowRight className="size-3.5" />
+                <ArrowRight className="size-3 sm:size-3.5 shrink-0" />
               </Link>
             </div>
 
