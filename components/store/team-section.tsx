@@ -54,14 +54,14 @@ export function TeamSection() {
         </div>
 
         {/* 4 Team Cards */}
-        <div className="mt-14 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 sm:mt-14 grid grid-cols-2 gap-3 sm:gap-7 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((member, idx) => (
             <article
               key={idx}
-              className="group overflow-hidden rounded-[2.4rem] border border-white/12 bg-[#0c2415] shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#43a047]/60 hover:shadow-[0_25px_50px_rgba(0,0,0,0.4)]"
+              className="group overflow-hidden rounded-[1.6rem] sm:rounded-[2.4rem] border border-white/12 bg-[#0c2415] shadow-xl transition-all duration-500 hover:-translate-y-2 hover:border-[#43a047]/60 hover:shadow-[0_25px_50px_rgba(0,0,0,0.4)]"
             >
               {/* Photo Container */}
-              <div className="relative aspect-[3/3.8] overflow-hidden bg-[#071c0f]">
+              <div className="relative aspect-[3/3.6] overflow-hidden bg-[#071c0f]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={member.image}
@@ -72,30 +72,30 @@ export function TeamSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c2415] via-transparent to-transparent opacity-50" />
 
                 {/* Floating Top Badge */}
-                <div className="absolute left-4 top-4">
-                  <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#071c0f]/80 px-3 py-1 text-[10.5px] font-bold text-[#86efac] backdrop-blur-md shadow-sm">
-                    <Sparkles className="size-3 text-[#f5b61a]" />
+                <div className="absolute left-2.5 top-2.5 sm:left-4 sm:top-4">
+                  <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-[#071c0f]/80 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[9.5px] sm:text-[10.5px] font-bold text-[#86efac] backdrop-blur-md shadow-sm">
+                    <Sparkles className="size-2.5 sm:size-3 text-[#f5b61a]" />
                     {member.badge}
                   </span>
                 </div>
               </div>
 
               {/* Info Container */}
-              <div className="flex items-center justify-between bg-gradient-to-b from-[#0c2415] to-[#071a0e] p-6">
-                <div>
-                  <h3 className="font-display text-[1.15rem] font-bold text-white transition-colors duration-300 group-hover:text-[#f5b61a]">
+              <div className="flex items-center justify-between bg-gradient-to-b from-[#0c2415] to-[#071a0e] p-3 sm:p-6">
+                <div className="min-w-0">
+                  <h3 className="font-display text-[13.5px] sm:text-[1.15rem] font-bold text-white transition-colors duration-300 group-hover:text-[#f5b61a] truncate">
                     {member.name}
                   </h3>
-                  <p className="mt-1 text-xs font-semibold text-[#86efac]">
+                  <p className="mt-0.5 text-[10.5px] sm:text-xs font-semibold text-[#86efac] truncate">
                     {member.role}
                   </p>
                 </div>
                 <button
                   type="button"
-                  className="grid size-11 place-items-center rounded-full bg-white/10 text-white shadow-sm transition-all duration-500 hover:bg-[#43a047] hover:scale-110 hover:rotate-[360deg] active:scale-95 cursor-pointer"
+                  className="grid size-8 sm:size-11 shrink-0 place-items-center rounded-full bg-white/10 text-white shadow-sm transition-all duration-500 hover:bg-[#43a047] hover:scale-110 hover:rotate-[360deg] active:scale-95 cursor-pointer ml-1.5"
                   aria-label={`Share ${member.name}'s profile`}
                 >
-                  <Share2 className="size-4.5" />
+                  <Share2 className="size-3.5 sm:size-4.5" />
                 </button>
               </div>
             </article>

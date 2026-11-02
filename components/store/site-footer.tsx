@@ -30,22 +30,22 @@ export function SiteFooter() {
     <footer id="contact" className="relative scroll-mt-24 overflow-hidden bg-[#07190e] text-white">
       
       {/* Yellow Contact Bar */}
-      <div className="border-b border-[#e2a412] bg-[#f5b61a] py-6 text-[#0d2a19]">
-        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
+      <div className="border-b border-[#e2a412] bg-[#f5b61a] py-4 sm:py-6 text-[#0d2a19]">
+        <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-3.5 sm:gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
           
           {/* Phone */}
           <a
             href="tel:+923001234567"
-            className="flex items-center gap-4 transition hover:opacity-85"
+            className="flex items-center gap-3.5 transition hover:opacity-85"
           >
-            <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#0c2415] text-[#43a047] shadow-sm">
-              <Phone className="size-5" />
+            <span className="grid size-11 sm:size-12 shrink-0 place-items-center rounded-full bg-[#0c2415] text-[#43a047] shadow-sm">
+              <Phone className="size-4.5 sm:size-5" />
             </span>
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-[#0d2a19]/75">
+              <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0d2a19]/75">
                 Call Us Anytime
               </p>
-              <p className="font-display text-base font-extrabold text-[#0c2415]">
+              <p className="font-display text-sm sm:text-base font-extrabold text-[#0c2415]">
                 +92 300 1234567
               </p>
             </div>
@@ -56,16 +56,16 @@ export function SiteFooter() {
             href="https://maps.google.com/?q=Malik+Dairy+GT+Road+Gujranwala"
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-4 transition hover:opacity-85 sm:border-l sm:border-[#0c2415]/15 sm:pl-6"
+            className="flex items-center gap-3.5 transition hover:opacity-85 border-t border-[#0c2415]/10 pt-3 sm:border-t-0 sm:border-l sm:border-[#0c2415]/15 sm:pl-6 sm:pt-0"
           >
-            <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#0c2415] text-[#43a047] shadow-sm">
-              <MapPin className="size-5" />
+            <span className="grid size-11 sm:size-12 shrink-0 place-items-center rounded-full bg-[#0c2415] text-[#43a047] shadow-sm">
+              <MapPin className="size-4.5 sm:size-5" />
             </span>
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-[#0d2a19]/75">
+              <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0d2a19]/75">
                 Visit Our Farm
               </p>
-              <p className="font-display text-base font-extrabold text-[#0c2415]">
+              <p className="font-display text-sm sm:text-base font-extrabold text-[#0c2415]">
                 GT Road, Gujranwala, PK
               </p>
             </div>
@@ -74,16 +74,16 @@ export function SiteFooter() {
           {/* Email */}
           <a
             href="mailto:info@malikdairy.pk"
-            className="flex items-center gap-4 transition hover:opacity-85 sm:border-l sm:border-[#0c2415]/15 sm:pl-6"
+            className="flex items-center gap-3.5 transition hover:opacity-85 border-t border-[#0c2415]/10 pt-3 sm:border-t-0 sm:border-l sm:border-[#0c2415]/15 sm:pl-6 sm:pt-0"
           >
-            <span className="grid size-12 shrink-0 place-items-center rounded-full bg-[#0c2415] text-[#43a047] shadow-sm">
-              <Mail className="size-5" />
+            <span className="grid size-11 sm:size-12 shrink-0 place-items-center rounded-full bg-[#0c2415] text-[#43a047] shadow-sm">
+              <Mail className="size-4.5 sm:size-5" />
             </span>
             <div>
-              <p className="text-[11px] font-bold uppercase tracking-wider text-[#0d2a19]/75">
+              <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-wider text-[#0d2a19]/75">
                 Send Email
               </p>
-              <p className="font-display text-base font-extrabold text-[#0c2415]">
+              <p className="font-display text-sm sm:text-base font-extrabold text-[#0c2415]">
                 info@malikdairy.pk
               </p>
             </div>

@@ -52,12 +52,12 @@ export function ProjectsSection() {
           </p>
         </div>
 
-        {/* 4 Tall Gallery Cards */}
-        <div className="mt-14 grid grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
+        {/* 4 Gallery Cards */}
+        <div className="mt-8 sm:mt-14 grid grid-cols-1 gap-4 sm:gap-7 sm:grid-cols-2 lg:grid-cols-4">
           {projects.map((item, idx) => (
             <div
               key={idx}
-              className="group relative aspect-[3/4.8] overflow-hidden rounded-[2.5rem] border border-[#0c2415]/10 bg-[#0c2415] shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(12,36,21,0.2)]"
+              className="group relative aspect-[4/3.3] sm:aspect-[3/4.8] overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-[#0c2415]/10 bg-[#0c2415] shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(12,36,21,0.2)]"
             >
               {/* Photo */}
               {/* eslint-disable-next-line @next/next/no-img-element */}

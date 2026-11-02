@@ -52,8 +52,8 @@ export function FaqSection() {
               <div className="absolute -bottom-4 -right-4 size-48 rounded-full bg-[#f5b61a]/15 blur-2xl" />
 
               {/* Main Photo Box */}
-              <div className="relative rounded-[2.5rem] bg-[#0c2415] p-6 sm:p-8 shadow-2xl">
-                <div className="relative aspect-[4/4.6] overflow-hidden rounded-[2rem] border border-white/10">
+              <div className="relative rounded-[2rem] sm:rounded-[2.5rem] bg-[#0c2415] p-4 sm:p-8 shadow-2xl">
+                <div className="relative aspect-[4/4.6] overflow-hidden rounded-[1.6rem] sm:rounded-[2rem] border border-white/10">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&w=900&q=80"
@@ -64,23 +64,23 @@ export function FaqSection() {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0c2415]/80 via-transparent to-transparent" />
 
                   {/* Floating Top Badge */}
-                  <div className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#0c2415]/85 px-3.5 py-1.5 text-[11px] font-bold text-[#86efac] backdrop-blur-md shadow-md">
-                    <MessageCircle className="size-3.5 text-[#43a047]" />
-                    <span>24/7 Farm Support Helpline</span>
+                  <div className="absolute left-3 top-3 sm:left-4 sm:top-4 inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-[#0c2415]/85 px-3 py-1 sm:px-3.5 sm:py-1.5 text-[10px] sm:text-[11px] font-bold text-[#86efac] backdrop-blur-md shadow-md">
+                    <MessageCircle className="size-3 sm:size-3.5 text-[#43a047]" />
+                    <span>24/7 Farm Support</span>
                   </div>
                 </div>
 
                 {/* Floating Experience Badge */}
-                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 z-10 flex w-[90%] max-w-[340px] items-center gap-3.5 rounded-3xl border-2 border-[#ffdb70] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-4 text-[#0c2415] shadow-[0_20px_45px_rgba(245,182,26,0.38)] transition-transform duration-300 hover:scale-105">
-                  <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#0c2415] text-[#f5b61a] shadow-md ring-2 ring-white/20">
-                    <Award className="size-6.5" />
+                <div className="absolute -bottom-5 sm:-bottom-6 left-1/2 -translate-x-1/2 z-10 flex w-[92%] sm:w-[90%] max-w-[340px] items-center gap-2.5 sm:gap-3.5 rounded-2xl sm:rounded-3xl border-2 border-[#ffdb70] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-2.5 sm:p-4 text-[#0c2415] shadow-[0_20px_45px_rgba(245,182,26,0.38)] transition-transform duration-300 hover:scale-105">
+                  <span className="grid size-9 sm:size-12 shrink-0 place-items-center rounded-xl sm:rounded-2xl bg-[#0c2415] text-[#f5b61a] shadow-md ring-2 ring-white/20">
+                    <Award className="size-5 sm:size-6.5" />
                   </span>
                   <div>
                     <div className="flex items-baseline gap-1">
-                      <span className="font-display text-2xl font-black leading-none">25+</span>
-                      <span className="text-xs font-black uppercase tracking-wider">Years</span>
+                      <span className="font-display text-xl sm:text-2xl font-black leading-none">25+</span>
+                      <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider">Years</span>
                     </div>
-                    <p className="mt-0.5 text-xs font-extrabold leading-snug text-[#0c2415]/90">
+                    <p className="mt-0.5 text-[10px] sm:text-xs font-extrabold leading-snug text-[#0c2415]/90">
                       Organic Agriculture &amp; Pure Dairy Purity
                     </p>
                   </div>
@@ -92,30 +92,30 @@ export function FaqSection() {
 
           {/* Right Column: Interactive FAQ Accordion Cards (7 Cols) */}
           <div className="lg:col-span-7">
-            <div className="rounded-[2.5rem] border border-[#0c2415]/10 bg-[#faf8f5] p-7 shadow-[0_15px_40px_rgba(0,0,0,0.03)] sm:p-10">
+            <div className="rounded-[2rem] sm:rounded-[2.5rem] border border-[#0c2415]/10 bg-[#faf8f5] p-5 sm:p-10 shadow-[0_15px_40px_rgba(0,0,0,0.03)]">
               
-              <div className="inline-flex items-center gap-2 rounded-full border border-[#43a047]/30 bg-[#e8f5e9] px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-[#2e7d32]">
+              <div className="inline-flex items-center gap-2 rounded-full border border-[#43a047]/30 bg-[#e8f5e9] px-3.5 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.16em] text-[#2e7d32]">
                 <Leaf className="size-3.5 text-[#43a047]" />
                 FAQ Questions
               </div>
 
-              <h2 className="mt-4 font-display text-[clamp(1.9rem,4vw,2.9rem)] font-extrabold tracking-tight text-[#0c2415]">
+              <h2 className="mt-3 sm:mt-4 font-display text-[clamp(1.7rem,4vw,2.9rem)] font-extrabold tracking-tight text-[#0c2415]">
                 How Can We Help You?
               </h2>
 
-              <p className="mt-2 text-xs leading-relaxed text-[#385342]">
+              <p className="mt-1.5 sm:mt-2 text-xs leading-relaxed text-[#385342]">
                 Find quick answers about our milking methods, doorstep delivery routes, and certified purity standards.
               </p>
 
               {/* Accordion Cards */}
-              <div className="mt-8 space-y-3.5">
+              <div className="mt-6 sm:mt-8 space-y-2.5 sm:space-y-3.5">
                 {faqs.map((faq, idx) => {
                   const isOpen = openIdx === idx;
                   return (
                     <div
                       key={idx}
                       className={cn(
-                        "rounded-2xl border transition-all duration-300",
+                        "rounded-xl sm:rounded-2xl border transition-all duration-300",
                         isOpen
                           ? "border-[#43a047] bg-white shadow-md ring-2 ring-[#43a047]/15"
                           : "border-[#0c2415]/10 bg-white/80 hover:border-[#43a047]/50 hover:bg-white"
@@ -124,24 +124,24 @@ export function FaqSection() {
                       <button
                         type="button"
                         onClick={() => setOpenIdx(isOpen ? null : idx)}
-                        className="flex w-full items-center justify-between gap-4 p-5 text-left font-display text-[14.5px] font-bold text-[#0c2415] transition-colors"
+                        className="flex w-full items-center justify-between gap-3 p-3.5 sm:p-5 text-left font-display text-[13.5px] sm:text-[14.5px] font-bold text-[#0c2415] transition-colors"
                       >
                         <span className={cn(isOpen && "text-[#2e7d32]")}>{faq.q}</span>
                         <span
                           className={cn(
-                            "grid size-8 shrink-0 place-items-center rounded-full transition-all duration-300",
+                            "grid size-7 sm:size-8 shrink-0 place-items-center rounded-full transition-all duration-300",
                             isOpen
                               ? "bg-[#43a047] text-white rotate-180"
                               : "bg-[#e8f5e9] text-[#2e7d32]"
                           )}
                         >
-                          {isOpen ? <Minus className="size-4" /> : <Plus className="size-4" />}
+                          {isOpen ? <Minus className="size-3.5 sm:size-4" /> : <Plus className="size-3.5 sm:size-4" />}
                         </span>
                       </button>
 
                       {isOpen ? (
-                        <div className="border-t border-[#0c2415]/10 px-5 pb-5 pt-3">
-                          <p className="text-xs leading-relaxed text-[#385342]">
+                        <div className="border-t border-[#0c2415]/10 px-4 pb-4 pt-2.5 sm:px-5 sm:pb-5 sm:pt-3">
+                          <p className="text-[11.5px] sm:text-xs leading-relaxed text-[#385342]">
                             {faq.a}
                           </p>
                         </div>
@@ -152,16 +152,16 @@ export function FaqSection() {
               </div>
 
               {/* WhatsApp Help CTA Box */}
-              <div className="mt-8 flex flex-col items-center justify-between gap-4 rounded-2xl border border-[#43a047]/30 bg-[#e8f5e9]/70 p-4.5 sm:flex-row">
+              <div className="mt-6 sm:mt-8 flex flex-col items-stretch sm:items-center justify-between gap-3.5 sm:gap-4 rounded-xl sm:rounded-2xl border border-[#43a047]/30 bg-[#e8f5e9]/70 p-3.5 sm:p-4.5 sm:flex-row">
                 <div className="flex items-center gap-3">
-                  <span className="grid size-10 place-items-center rounded-xl bg-wa text-white shadow-sm">
-                    <WhatsAppIcon className="size-5" />
+                  <span className="grid size-9 sm:size-10 shrink-0 place-items-center rounded-xl bg-wa text-white shadow-sm">
+                    <WhatsAppIcon className="size-4.5 sm:size-5" />
                   </span>
                   <div>
                     <p className="text-xs font-bold text-[#0c2415]">
                       Still have questions about our dairy?
                     </p>
-                    <p className="text-[11px] text-[#385342]">
+                    <p className="text-[10.5px] sm:text-[11px] text-[#385342]">
                       Chat directly with our farm manager in Gujranwala.
                     </p>
                   </div>
@@ -171,7 +171,7 @@ export function FaqSection() {
                   href={whatsappLink(supportWhatsAppMessage())}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full bg-[#43a047] px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#388e3c]"
+                  className="inline-flex justify-center items-center gap-2 rounded-full bg-[#43a047] px-4 py-2.5 text-xs font-bold text-white shadow-sm transition hover:bg-[#388e3c]"
                 >
                   Ask on WhatsApp
                   <ArrowRight className="size-3.5" />

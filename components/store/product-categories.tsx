@@ -97,7 +97,7 @@ export function ProductCategories() {
               </div>
 
               {/* Card Body - Deep Forest Green */}
-              <div className="flex flex-1 flex-col justify-between bg-gradient-to-b from-[#0e3b1f] to-[#082413] p-8 text-white sm:p-9">
+              <div className="flex flex-1 flex-col justify-between bg-gradient-to-b from-[#0e3b1f] to-[#082413] p-6 text-white sm:p-9">
                 <div>
                   <span className="inline-block rounded-full bg-white/10 px-3.5 py-1 text-[11px] font-bold uppercase tracking-wider text-[#86efac] backdrop-blur-sm">
                     {item.tag}

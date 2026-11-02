@@ -61,7 +61,7 @@ export function BlogSection() {
           
           {/* Left: 1 Large Featured Post (5 columns) */}
           <div className="lg:col-span-5">
-            <article className="group relative flex h-full min-h-[500px] flex-col justify-end overflow-hidden rounded-[2.5rem] bg-[#0c2415] p-8 text-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(12,36,21,0.3)] cursor-pointer">
+            <article className="group relative flex h-full min-h-[360px] sm:min-h-[500px] flex-col justify-end overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] bg-[#0c2415] p-5 sm:p-8 text-white shadow-xl transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(12,36,21,0.3)] cursor-pointer">
               {/* Image */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
@@ -73,8 +73,8 @@ export function BlogSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#081f10] via-[#081f10]/55 to-transparent opacity-95" />
 
               {/* Top Tag */}
-              <div className="absolute left-6 top-6">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/40 px-3.5 py-1 text-xs font-bold text-white backdrop-blur-md shadow-sm">
+              <div className="absolute left-4 top-4 sm:left-6 sm:top-6">
+                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/40 px-3 py-1 sm:px-3.5 text-[11px] sm:text-xs font-bold text-white backdrop-blur-md shadow-sm">
                   <Sparkles className="size-3 text-[#f5b61a]" />
                   Featured Article
                 </span>
@@ -82,28 +82,28 @@ export function BlogSection() {
 
               {/* Content */}
               <div className="relative">
-                <div className="flex items-center gap-3 text-xs font-bold text-[#86efac]">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#43a047] px-3 py-1 text-white">
+                <div className="flex items-center gap-2.5 sm:gap-3 text-xs font-bold text-[#86efac]">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#43a047] px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs text-white">
                     <Calendar className="size-3" />
                     Oct 28, 2026
                   </span>
-                  <span className="flex items-center gap-1 text-white/70">
+                  <span className="flex items-center gap-1 text-[11px] sm:text-xs text-white/70">
                     <Clock className="size-3" />
                     5 min read
                   </span>
                 </div>
 
-                <h3 className="mt-4 font-display text-[1.5rem] font-bold leading-tight text-white transition-colors duration-300 group-hover:text-[#f5b61a]">
+                <h3 className="mt-3 sm:mt-4 font-display text-[1.25rem] sm:text-[1.5rem] font-bold leading-tight text-white transition-colors duration-300 group-hover:text-[#f5b61a]">
                   The Benefits Of Eating Pure Organic Produce &amp; Raw Dairy Every Day
                 </h3>
 
-                <p className="mt-3 text-xs leading-relaxed text-white/80">
+                <p className="mt-2 sm:mt-3 text-[11.5px] sm:text-xs leading-relaxed text-white/80 line-clamp-3 sm:line-clamp-none">
                   Discover how unpasteurized organic grass-fed milk and slow-simmered desi ghee nourish gut microflora, boost metabolism, and deliver bio-available vitamins.
                 </p>
 
-                <div className="mt-6 inline-flex items-center gap-2.5 text-xs font-extrabold uppercase tracking-widest text-[#86efac] transition group-hover:text-white">
+                <div className="mt-4 sm:mt-6 inline-flex items-center gap-2 text-xs font-extrabold uppercase tracking-widest text-[#86efac] transition group-hover:text-white">
                   <span>Read Full Article</span>
-                  <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+                  <ArrowRight className="size-3.5 sm:size-4 transition-transform duration-300 group-hover:translate-x-1.5" />
                 </div>
               </div>
             </article>

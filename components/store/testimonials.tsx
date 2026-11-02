@@ -73,57 +73,57 @@ export function Testimonials() {
         </div>
 
         {/* 3 Review Cards */}
-        <div className="mt-14 grid gap-8 md:grid-cols-3">
+        <div className="mt-8 sm:mt-14 grid gap-5 sm:gap-8 md:grid-cols-3">
           {reviews.map((rev, idx) => (
             <article
               key={idx}
-              className="group relative flex flex-col justify-between overflow-hidden rounded-[2.2rem] border border-[#0c2415]/10 bg-white p-8 shadow-sm transition-all duration-500 hover:border-[#43a047] hover:-translate-y-2.5 hover:shadow-[0_25px_50px_rgba(12,36,21,0.12)] cursor-pointer"
+              className="group relative flex flex-col justify-between overflow-hidden rounded-[1.8rem] sm:rounded-[2.2rem] border border-[#0c2415]/10 bg-white p-5 sm:p-8 shadow-sm transition-all duration-500 hover:border-[#43a047] hover:-translate-y-2.5 hover:shadow-[0_25px_50px_rgba(12,36,21,0.12)] cursor-pointer"
             >
               {/* Subtle Decorative Quote Icon in Card Background */}
-              <Quote className="pointer-events-none absolute right-6 top-6 size-12 text-[#43a047]/10 transition-all duration-500 group-hover:scale-115 group-hover:rotate-12 group-hover:text-[#43a047]/25" />
+              <Quote className="pointer-events-none absolute right-4 top-4 sm:right-6 sm:top-6 size-10 sm:size-12 text-[#43a047]/10 transition-all duration-500 group-hover:scale-115 group-hover:rotate-12 group-hover:text-[#43a047]/25" />
 
               <div>
                 {/* Verified Tag, Product & Rating */}
                 <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5e9] px-3 py-1 text-[10.5px] font-black uppercase tracking-wider text-[#2e7d32]">
-                    <ShieldCheck className="size-3.5" />
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-[#e8f5e9] px-2.5 py-0.5 sm:px-3 sm:py-1 text-[9.5px] sm:text-[10.5px] font-black uppercase tracking-wider text-[#2e7d32]">
+                    <ShieldCheck className="size-3 sm:size-3.5" />
                     {rev.tag}
                   </span>
                   <div className="flex gap-0.5 text-[#43a047]">
                     {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="size-4 fill-current" />
+                      <Star key={i} className="size-3.5 sm:size-4 fill-current" />
                     ))}
                   </div>
                 </div>
 
                 {/* Product Tag */}
-                <p className="mt-3 text-[11px] font-bold text-[#43a047]">
+                <p className="mt-2.5 sm:mt-3 text-[10.5px] sm:text-[11px] font-bold text-[#43a047]">
                   {rev.product}
                 </p>
 
                 {/* Quote Text */}
-                <p className="mt-4 font-display text-[15px] leading-relaxed text-[#0c2415]/85 italic">
+                <p className="mt-3 sm:mt-4 font-display text-[13.5px] sm:text-[15px] leading-relaxed text-[#0c2415]/85 italic">
                   &ldquo;{rev.quote}&rdquo;
                 </p>
               </div>
 
               {/* Reviewer Profile */}
-              <div className="mt-8 flex items-center justify-between border-t border-[#0c2415]/10 pt-5">
-                <div className="flex items-center gap-3.5">
+              <div className="mt-6 sm:mt-8 flex items-center justify-between border-t border-[#0c2415]/10 pt-4 sm:pt-5">
+                <div className="flex items-center gap-3 sm:gap-3.5">
                   <div className="relative">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={rev.avatar}
                       alt={rev.name}
-                      className="size-12 rounded-full border-2 border-[#43a047]/40 object-cover shadow-sm ring-2 ring-[#e8f5e9]"
+                      className="size-10 sm:size-12 rounded-full border-2 border-[#43a047]/40 object-cover shadow-sm ring-2 ring-[#e8f5e9]"
                     />
-                    <CheckCircle2 className="absolute -bottom-1 -right-1 size-4 rounded-full bg-white text-[#43a047]" fill="#43a047" />
+                    <CheckCircle2 className="absolute -bottom-1 -right-1 size-3.5 sm:size-4 rounded-full bg-white text-[#43a047]" fill="#43a047" />
                   </div>
                   <div>
-                    <h4 className="text-[14.5px] font-bold text-[#0c2415]">
+                    <h4 className="text-[13.5px] sm:text-[14.5px] font-bold text-[#0c2415]">
                       {rev.name}
                     </h4>
-                    <p className="text-xs font-medium text-[#385342]">
+                    <p className="text-[11px] sm:text-xs font-medium text-[#385342]">
                       {rev.role}
                     </p>
                   </div>
@@ -134,7 +134,7 @@ export function Testimonials() {
         </div>
 
         {/* Bottom Trust Guarantee Strip */}
-        <div className="mt-12 flex flex-wrap items-center justify-center gap-6 rounded-3xl border border-[#0c2415]/10 bg-white/70 px-6 py-4.5 text-center text-xs font-semibold text-[#0c2415] shadow-xs backdrop-blur-md sm:gap-10">
+        <div className="mt-8 sm:mt-12 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10 rounded-2xl sm:rounded-3xl border border-[#0c2415]/10 bg-white/70 px-4 py-3 sm:px-6 sm:py-4.5 text-center text-[11px] sm:text-xs font-semibold text-[#0c2415] shadow-xs backdrop-blur-md">
           <span className="flex items-center gap-2">
             <span className="grid size-5 place-items-center rounded-full bg-[#e8f5e9] text-[#2e7d32]">
               ✓

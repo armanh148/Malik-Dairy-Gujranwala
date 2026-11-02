@@ -40,10 +40,10 @@ export function StorySection() {
               </div>
 
               {/* Bottom Row Overlapping Main Image: Small Landscape Photo + 20+ Years Yellow Badge Side-by-Side */}
-              <div className="relative -mt-16 sm:-mt-20 z-20 px-2 sm:px-3 flex items-stretch gap-3 sm:gap-4">
+              <div className="relative -mt-12 sm:-mt-20 z-20 px-1 sm:px-3 flex items-center gap-2 sm:gap-4">
                 
                 {/* Small Landscape Photo (Overlapping Main Image Beside 20+ Year Badge) */}
-                <div className="group relative aspect-[16/11] w-[45%] shrink-0 overflow-hidden rounded-2xl sm:rounded-3xl border-2 border-white/25 bg-[#0c2415] shadow-[0_22px_45px_rgba(0,0,0,0.7)] transition-transform duration-300 hover:scale-105">
+                <div className="group relative aspect-[16/11] w-[38%] sm:w-[45%] shrink-0 overflow-hidden rounded-xl sm:rounded-3xl border-2 border-white/25 bg-[#0c2415] shadow-[0_22px_45px_rgba(0,0,0,0.7)] transition-transform duration-300 hover:scale-105">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80"
@@ -52,29 +52,29 @@ export function StorySection() {
                     className="size-full object-cover transition duration-700 hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#07190e]/80 via-transparent to-transparent" />
-                  <span className="absolute bottom-2 left-2.5 inline-flex items-center gap-1 rounded-full bg-black/50 px-2 py-0.5 text-[9px] font-bold text-white backdrop-blur-md sm:text-[10px]">
+                  <span className="absolute bottom-1.5 left-2 sm:bottom-2 sm:left-2.5 inline-flex items-center gap-1 rounded-full bg-black/55 px-1.5 py-0.5 text-[8.5px] font-bold text-white backdrop-blur-md sm:text-[10px]">
                     <span className="size-1.5 rounded-full bg-[#43a047] animate-pulse" />
                     Pasture Farm
                   </span>
                 </div>
 
                 {/* Overlapping Golden Experience Badge Level with it */}
-                <div className="flex-1 flex flex-col justify-center rounded-2xl sm:rounded-3xl border-2 border-[#ffe082] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-3 sm:p-4 text-[#07190e] shadow-[0_22px_45px_rgba(245,182,26,0.45)] transition-transform duration-300 hover:scale-105">
-                  <div className="flex items-center gap-2.5 sm:gap-3">
-                    <span className="grid size-9 sm:size-11 shrink-0 place-items-center rounded-xl sm:rounded-2xl bg-[#07190e] text-[#f5b61a] shadow-md ring-2 ring-white/20">
-                      <Award className="size-5 sm:size-6" />
+                <div className="flex-1 flex flex-col justify-center rounded-xl sm:rounded-3xl border-2 border-[#ffe082] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-2.5 sm:p-4 text-[#07190e] shadow-[0_22px_45px_rgba(245,182,26,0.45)] transition-transform duration-300 hover:scale-105">
+                  <div className="flex items-center gap-2 sm:gap-3">
+                    <span className="grid size-8 sm:size-11 shrink-0 place-items-center rounded-lg sm:rounded-2xl bg-[#07190e] text-[#f5b61a] shadow-md ring-2 ring-white/20">
+                      <Award className="size-4.5 sm:size-6" />
                     </span>
                     <div className="min-w-0">
                       <div className="flex items-baseline gap-1">
-                        <span className="font-display text-xl sm:text-2xl font-black leading-none">
+                        <span className="font-display text-lg sm:text-2xl font-black leading-none">
                           20+
                         </span>
-                        <span className="text-[10px] sm:text-xs font-black uppercase tracking-wider">
+                        <span className="text-[9px] sm:text-xs font-black uppercase tracking-wider">
                           Years
                         </span>
                       </div>
-                      <p className="mt-0.5 text-[10px] sm:text-[11px] font-extrabold leading-tight text-[#07190e]/95 line-clamp-2">
-                        There are 20+ years of agriculture experience in our farm
+                      <p className="mt-0.5 text-[9px] sm:text-[11px] font-extrabold leading-tight text-[#07190e]/95 line-clamp-2">
+                        20+ years of agriculture experience in our farm
                       </p>
                     </div>
                   </div>
@@ -89,50 +89,50 @@ export function StorySection() {
           <div className="lg:col-span-6 xl:col-span-7 lg:pl-4 xl:pl-8">
             
             {/* Pill Tag */}
-            <div className="inline-flex items-center gap-2 rounded-full border border-[#43a047]/40 bg-[#0f341b]/90 px-4 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-[#86efac] backdrop-blur-md shadow-sm">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[#43a047]/40 bg-[#0f341b]/90 px-3.5 py-1 sm:px-4 sm:py-1.5 text-[11px] sm:text-xs font-bold uppercase tracking-[0.18em] text-[#86efac] backdrop-blur-md shadow-sm">
               <Leaf className="size-3.5 text-[#43a047]" />
               About Our Farm
             </div>
 
             {/* Main Heading */}
-            <h2 className="mt-5 font-display text-[clamp(2.2rem,4.5vw,3.6rem)] font-extrabold leading-[1.06] tracking-tight text-white">
+            <h2 className="mt-4 sm:mt-5 font-display text-[clamp(1.9rem,4.5vw,3.6rem)] font-extrabold leading-[1.08] tracking-tight text-white">
               We&apos;re Best Agricultural <br />
               <span className="text-[#86efac]">&amp; Organic Farm</span>
             </h2>
 
             {/* Intro paragraph */}
-            <p className="mt-6 text-[15.5px] leading-relaxed text-white/85 sm:text-[16.5px]">
+            <p className="mt-4 sm:mt-6 text-[14px] leading-relaxed text-white/85 sm:text-[16.5px]">
               For over two decades, Malik Dairy has led natural cattle farming, sustainable agriculture, and pure artisanal dairy production in Gujranwala. We hold every harvest to the highest benchmark of purity, honest nutrition, and rich traditional taste.
             </p>
 
             {/* 2 Bullet Feature Items (Matching Reference Image Style) */}
-            <div className="mt-9 space-y-6">
+            <div className="mt-6 sm:mt-9 space-y-4 sm:space-y-6">
               
               {/* Feature 1 */}
-              <div className="group flex items-start gap-4 rounded-2xl p-2 transition-all duration-300 hover:translate-x-1.5">
-                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20 transition-transform duration-300 group-hover:scale-110">
-                  <Check className="size-5" strokeWidth={3} />
+              <div className="group flex items-start gap-3 sm:gap-4 rounded-2xl p-1.5 sm:p-2 transition-all duration-300 hover:translate-x-1.5">
+                <span className="grid size-9 sm:size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20 transition-transform duration-300 group-hover:scale-110">
+                  <Check className="size-4.5 sm:size-5" strokeWidth={3} />
                 </span>
                 <div>
-                  <h3 className="font-display text-[17px] font-bold text-white transition-colors duration-300 group-hover:text-[#86efac]">
+                  <h3 className="font-display text-[15px] sm:text-[17px] font-bold text-white transition-colors duration-300 group-hover:text-[#86efac]">
                     100% Guaranteed Organic Product
                   </h3>
-                  <p className="mt-1 text-[13.5px] leading-relaxed text-white/75">
+                  <p className="mt-0.5 sm:mt-1 text-xs sm:text-[13.5px] leading-relaxed text-white/75">
                     Our herds feed on natural green alfalfa and clover pastures with zero synthetic hormones, chemical feeds, or industrial fillers.
                   </p>
                 </div>
               </div>
 
               {/* Feature 2 */}
-              <div className="group flex items-start gap-4 rounded-2xl p-2 transition-all duration-300 hover:translate-x-1.5">
-                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20 transition-transform duration-300 group-hover:scale-110">
-                  <Check className="size-5" strokeWidth={3} />
+              <div className="group flex items-start gap-3 sm:gap-4 rounded-2xl p-1.5 sm:p-2 transition-all duration-300 hover:translate-x-1.5">
+                <span className="grid size-9 sm:size-11 shrink-0 place-items-center rounded-full bg-[#43a047] text-white shadow-md ring-4 ring-[#43a047]/20 transition-transform duration-300 group-hover:scale-110">
+                  <Check className="size-4.5 sm:size-5" strokeWidth={3} />
                 </span>
                 <div>
-                  <h3 className="font-display text-[17px] font-bold text-white transition-colors duration-300 group-hover:text-[#86efac]">
+                  <h3 className="font-display text-[15px] sm:text-[17px] font-bold text-white transition-colors duration-300 group-hover:text-[#86efac]">
                     Top-Quality Healthy Food Production
                   </h3>
-                  <p className="mt-1 text-[13.5px] leading-relaxed text-white/75">
+                  <p className="mt-0.5 sm:mt-1 text-xs sm:text-[13.5px] leading-relaxed text-white/75">
                     Slow copper-kettle simmered pure desi ghee, chilled fresh milk, and laboratory-verified microbiological density standards.
                   </p>
                 </div>
@@ -141,10 +141,10 @@ export function StorySection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="mt-10 flex flex-wrap items-center gap-4">
+            <div className="mt-7 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 sm:gap-4">
               <Link
                 href="/#services"
-                className="shimmer-btn group inline-flex items-center gap-3 rounded-full bg-[#43a047] px-8 py-4 text-xs font-bold uppercase tracking-widest text-white shadow-[0_12px_28px_-5px_rgba(67,160,71,0.55)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-1 active:scale-95"
+                className="shimmer-btn group inline-flex justify-center items-center gap-3 rounded-full bg-[#43a047] px-7 py-3.5 sm:px-8 sm:py-4 text-xs font-bold uppercase tracking-widest text-white shadow-[0_12px_28px_-5px_rgba(67,160,71,0.55)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-1 active:scale-95"
               >
                 <span>Discover More</span>
                 <span className="grid size-6 place-items-center rounded-full bg-white/20 transition-transform duration-300 group-hover:translate-x-1">
@@ -154,7 +154,7 @@ export function StorySection() {
 
               <Link
                 href="/#products"
-                className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-4 text-xs font-bold uppercase tracking-wider text-white transition hover:border-[#f5b61a] hover:text-[#f5b61a]"
+                className="inline-flex justify-center items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3.5 sm:py-4 text-xs font-bold uppercase tracking-wider text-white transition hover:border-[#f5b61a] hover:text-[#f5b61a]"
               >
                 <span>Explore Pantry</span>
                 <ArrowRight className="size-3.5" />

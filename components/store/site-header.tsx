@@ -52,7 +52,7 @@ export function SiteHeader() {
       </div>
 
       <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0c2415]/95 text-white backdrop-blur-xl">
-        <div className="relative mx-auto flex h-[76px] max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <div className="relative mx-auto flex h-[66px] sm:h-[76px] max-w-[1600px] items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
           <Logo invert />
 
           <nav

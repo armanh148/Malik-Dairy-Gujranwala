@@ -55,18 +55,18 @@ export function WorkflowSection() {
         </div>
 
         {/* 2-Column Content */}
-        <div className="mt-14 grid items-center gap-12 lg:grid-cols-12 lg:gap-16 xl:gap-20">
+        <div className="mt-10 sm:mt-14 grid items-center gap-10 lg:grid-cols-12 lg:gap-16 xl:gap-20">
           
           {/* Left Column: Portrait of Cheerful Female Farmer with Harvest Basket (5 Cols) */}
           <div className="lg:col-span-5">
-            <div className="relative mx-auto w-full max-w-[480px] lg:max-w-none">
+            <div className="relative mx-auto w-full max-w-[420px] lg:max-w-none">
               
               {/* Offset Decorative Dashed Frame */}
-              <div className="absolute -inset-3.5 rounded-[3rem] border-2 border-dashed border-[#43a047]/25 sm:-inset-4" />
+              <div className="absolute -inset-2.5 rounded-[2.2rem] border-2 border-dashed border-[#43a047]/25 sm:-inset-4 sm:rounded-[3rem]" />
               <div className="absolute -bottom-4 -left-4 size-44 rounded-full bg-[#f5b61a]/15 blur-2xl" />
 
               {/* Main Photo Container */}
-              <div className="relative aspect-[4/5] overflow-hidden rounded-[2.5rem] border border-[#0c2415]/10 bg-[#f7f8f6] shadow-[0_20px_50px_rgba(12,36,21,0.12)]">
+              <div className="relative aspect-[4/4.4] sm:aspect-[4/5] overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-[#0c2415]/10 bg-[#f7f8f6] shadow-[0_20px_50px_rgba(12,36,21,0.12)]">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1000&q=80"
@@ -77,27 +77,27 @@ export function WorkflowSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c2415]/75 via-transparent to-transparent opacity-50" />
 
                 {/* Floating Top Pill Badge */}
-                <div className="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/95 px-3.5 py-1.5 text-[11px] font-bold text-[#0c2415] shadow-md backdrop-blur-md">
+                <div className="absolute right-3 top-3 sm:right-4 sm:top-4 inline-flex items-center gap-1.5 rounded-full border border-white/60 bg-white/95 px-3 py-1 sm:px-3.5 sm:py-1.5 text-[10px] sm:text-[11px] font-bold text-[#0c2415] shadow-md backdrop-blur-md">
                   <Sparkles className="size-3 text-[#43a047]" />
-                  <span>100% Organic Morning Harvest</span>
+                  <span>100% Morning Harvest</span>
                 </div>
 
                 {/* Minimalist Floating Bottom Pill */}
-                <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between rounded-2xl border border-white/70 bg-white/95 px-4 py-3 shadow-lg backdrop-blur-md">
-                  <div className="flex items-center gap-2.5">
-                    <span className="grid size-7 place-items-center rounded-full bg-[#43a047] text-white">
-                      <Check className="size-4" strokeWidth={3} />
+                <div className="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 flex items-center justify-between rounded-xl sm:rounded-2xl border border-white/70 bg-white/95 px-3 py-2 sm:px-4 sm:py-3 shadow-lg backdrop-blur-md">
+                  <div className="flex items-center gap-2 sm:gap-2.5">
+                    <span className="grid size-6 sm:size-7 place-items-center rounded-full bg-[#43a047] text-white">
+                      <Check className="size-3.5 sm:size-4" strokeWidth={3} />
                     </span>
                     <div>
-                      <p className="text-xs font-extrabold text-[#0c2415]">
+                      <p className="text-[11px] sm:text-xs font-extrabold text-[#0c2415]">
                         Delivered Under 4°C
                       </p>
-                      <p className="text-[10.5px] text-[#385342]">
+                      <p className="text-[9.5px] sm:text-[10.5px] text-[#385342]">
                         Bottled fresh every morning
                       </p>
                     </div>
                   </div>
-                  <span className="rounded-full bg-[#e8f5e9] px-2.5 py-1 text-[10px] font-bold text-[#2e7d32]">
+                  <span className="rounded-full bg-[#e8f5e9] px-2 py-0.5 sm:px-2.5 sm:py-1 text-[9px] sm:text-[10px] font-bold text-[#2e7d32]">
                     Daily 7 AM
                   </span>
                 </div>
@@ -108,32 +108,32 @@ export function WorkflowSection() {
 
           {/* Right Column: 4 Clean Process Step Rows (7 Cols) */}
           <div className="lg:col-span-7">
-            <div className="space-y-2">
+            <div className="space-y-1 sm:space-y-2">
               {steps.map((item, idx) => {
                 const Icon = item.icon;
                 return (
                   <div
                     key={idx}
-                    className="group relative flex items-start gap-5 rounded-3xl p-5 transition-all duration-300 hover:bg-[#faf9f5] hover:shadow-[0_10px_30px_rgba(12,36,21,0.05)] sm:p-6"
+                    className="group relative flex items-start gap-3.5 rounded-2xl sm:rounded-3xl p-3 sm:p-5 transition-all duration-300 hover:bg-[#faf9f5] hover:shadow-[0_10px_30px_rgba(12,36,21,0.05)] sm:gap-5"
                   >
                     {/* Icon Container with Hover Animation */}
                     <div className="relative shrink-0">
-                      <span className="grid size-14 place-items-center rounded-2xl border border-[#43a047]/30 bg-[#e8f5e9] text-[#2e7d32] shadow-xs transition-all duration-300 group-hover:bg-[#43a047] group-hover:text-white group-hover:scale-105 group-hover:shadow-md">
-                        <Icon className="size-7" strokeWidth={1.85} />
+                      <span className="grid size-11 sm:size-14 place-items-center rounded-xl sm:rounded-2xl border border-[#43a047]/30 bg-[#e8f5e9] text-[#2e7d32] shadow-xs transition-all duration-300 group-hover:bg-[#43a047] group-hover:text-white group-hover:scale-105 group-hover:shadow-md">
+                        <Icon className="size-5 sm:size-7" strokeWidth={1.85} />
                       </span>
                     </div>
 
                     {/* Step Information */}
-                    <div className="flex-1 min-w-0 border-b border-[#0c2415]/10 pb-6 group-last:border-none group-last:pb-0">
-                      <div className="flex items-center justify-between gap-3">
-                        <h3 className="font-display text-[18px] font-bold text-[#0c2415] transition-colors duration-300 group-hover:text-[#2e7d32]">
+                    <div className="flex-1 min-w-0 border-b border-[#0c2415]/10 pb-4 sm:pb-6 group-last:border-none group-last:pb-0">
+                      <div className="flex items-center justify-between gap-2 sm:gap-3">
+                        <h3 className="font-display text-[15px] sm:text-[18px] font-bold text-[#0c2415] transition-colors duration-300 group-hover:text-[#2e7d32]">
                           {item.title}
                         </h3>
-                        <span className="shrink-0 rounded-full bg-[#e8f5e9] px-2.5 py-0.5 text-[10.5px] font-extrabold uppercase tracking-wider text-[#2e7d32] transition-colors group-hover:bg-[#43a047] group-hover:text-white">
+                        <span className="shrink-0 rounded-full bg-[#e8f5e9] px-2 py-0.5 text-[9.5px] sm:text-[10.5px] font-extrabold uppercase tracking-wider text-[#2e7d32] transition-colors group-hover:bg-[#43a047] group-hover:text-white">
                           Step {item.step}
                         </span>
                       </div>
-                      <p className="mt-2 text-[13.5px] leading-relaxed text-[#385342]">
+                      <p className="mt-1 sm:mt-2 text-xs sm:text-[13.5px] leading-relaxed text-[#385342]">
                         {item.description}
                       </p>
                     </div>
