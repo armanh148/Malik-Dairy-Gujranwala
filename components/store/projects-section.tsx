@@ -51,7 +51,8 @@ export function ProjectsSection() {
     if (!scrollRef.current) return;
     const container = scrollRef.current;
     const card = container.querySelector<HTMLElement>("[data-project-card]");
-    const cardWidth = card ? card.offsetWidth + 20 : 320;
+    const gap = typeof window !== "undefined" && window.innerWidth < 640 ? 10 : 28;
+    const cardWidth = card ? card.offsetWidth + gap : 180;
     container.scrollBy({
       left: direction === "left" ? -cardWidth : cardWidth,
       behavior: "smooth",
@@ -66,7 +67,7 @@ export function ProjectsSection() {
       cards[index].scrollIntoView({
         behavior: "smooth",
         block: "nearest",
-        inline: "center",
+        inline: "start",
       });
       setActiveIndex(index);
     }
@@ -80,7 +81,8 @@ export function ProjectsSection() {
       if (!container) return;
       const scrollLeft = container.scrollLeft;
       const card = container.querySelector<HTMLElement>("[data-project-card]");
-      const cardWidth = card ? card.offsetWidth + 20 : 320;
+      const gap = window.innerWidth < 640 ? 10 : 28;
+      const cardWidth = card ? card.offsetWidth + gap : 180;
       const newIndex = Math.round(scrollLeft / cardWidth);
       setActiveIndex(Math.min(projects.length - 1, Math.max(0, newIndex)));
     }
@@ -133,16 +135,16 @@ export function ProjectsSection() {
           </div>
         </div>
 
-        {/* Carousel Gallery Cards Container */}
+        {/* Carousel Gallery Cards Container - 2 Cards Visible on Mobile */}
         <div
           ref={scrollRef}
-          className="mt-8 sm:mt-14 flex items-stretch gap-4 sm:gap-7 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pt-2 -mx-4 px-4 sm:mx-0 sm:px-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="mt-6 sm:mt-14 flex items-stretch gap-2.5 sm:gap-7 overflow-x-auto scroll-smooth snap-x snap-mandatory pb-4 pt-2 -mx-4 px-4 sm:mx-0 sm:px-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
           {projects.map((item, idx) => (
             <div
               key={idx}
               data-project-card
-              className="group relative aspect-[3/4.2] sm:aspect-[3/4.8] overflow-hidden rounded-[2rem] sm:rounded-[2.5rem] border border-[#0c2415]/10 bg-[#0c2415] shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(12,36,21,0.2)] cursor-pointer w-[82vw] sm:w-[320px] lg:w-[calc(25%-1.35rem)] shrink-0 snap-center sm:snap-start"
+              className="group relative aspect-[3/4.2] sm:aspect-[3/4.8] overflow-hidden rounded-[1.35rem] sm:rounded-[2.5rem] border border-[#0c2415]/10 bg-[#0c2415] shadow-md transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_25px_50px_rgba(12,36,21,0.2)] cursor-pointer w-[calc((100vw-42px)/2)] sm:w-[320px] lg:w-[calc(25%-1.35rem)] shrink-0 snap-start"
             >
               {/* Photo */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -155,26 +157,26 @@ export function ProjectsSection() {
               <div className="absolute inset-0 bg-gradient-to-t from-[#081f10] via-[#081f10]/35 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-95" />
 
               {/* Top Tag */}
-              <div className="absolute left-3.5 top-3.5 sm:left-4 sm:top-4">
-                <span className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/40 px-3 py-1 text-[10.5px] font-bold text-white backdrop-blur-md shadow-sm">
-                  <Sparkles className="size-3 text-[#f5b61a]" />
+              <div className="absolute left-2.5 top-2.5 sm:left-4 sm:top-4">
+                <span className="inline-flex items-center gap-1 sm:gap-1.5 rounded-full border border-white/20 bg-black/40 px-2 py-0.5 sm:px-3 sm:py-1 text-[9.5px] sm:text-[10.5px] font-bold text-white backdrop-blur-md shadow-sm">
+                  <Sparkles className="size-2.5 sm:size-3 text-[#f5b61a]" />
                   {item.number}
                 </span>
               </div>
 
               {/* Bottom Dark Green Pill Badge with Title */}
-              <div className="absolute inset-x-3.5 bottom-3.5 sm:inset-x-4 sm:bottom-4">
-                <div className="flex items-center justify-between rounded-2xl sm:rounded-3xl border border-white/15 bg-[#092012]/92 p-3.5 sm:p-4.5 text-white backdrop-blur-md shadow-lg transition-all duration-300 group-hover:bg-[#43a047] group-hover:border-[#43a047]">
-                  <div className="min-w-0 pr-2">
-                    <p className="text-[9.5px] sm:text-[10px] font-extrabold uppercase tracking-widest text-[#86efac] group-hover:text-white/90 truncate">
+              <div className="absolute inset-x-2 bottom-2 sm:inset-x-4 sm:bottom-4">
+                <div className="flex items-center justify-between rounded-xl sm:rounded-3xl border border-white/15 bg-[#092012]/92 p-2 sm:p-4.5 text-white backdrop-blur-md shadow-lg transition-all duration-300 group-hover:bg-[#43a047] group-hover:border-[#43a047]">
+                  <div className="min-w-0 pr-1.5 sm:pr-2">
+                    <p className="text-[8px] sm:text-[10px] font-extrabold uppercase tracking-widest text-[#86efac] group-hover:text-white/90 truncate">
                       {item.subtitle}
                     </p>
-                    <p className="mt-0.5 font-display text-[14px] sm:text-[15.5px] font-bold leading-tight text-white truncate">
+                    <p className="mt-0.5 font-display text-[12px] sm:text-[15.5px] font-bold leading-tight text-white truncate">
                       {item.title}
                     </p>
                   </div>
-                  <span className="grid size-9 sm:size-10 shrink-0 place-items-center rounded-full bg-white/20 text-white shadow-sm transition-all duration-300 group-hover:bg-white group-hover:text-[#0c2415] group-hover:scale-110 group-hover:rotate-[-45deg]">
-                    <ArrowRight className="size-4 sm:size-4.5" />
+                  <span className="grid size-6 sm:size-10 shrink-0 place-items-center rounded-full bg-white/20 text-white shadow-sm transition-all duration-300 group-hover:bg-white group-hover:text-[#0c2415] group-hover:scale-110 group-hover:rotate-[-45deg]">
+                    <ArrowRight className="size-3 sm:size-4.5" />
                   </span>
                 </div>
               </div>
