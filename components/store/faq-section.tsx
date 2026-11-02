@@ -44,7 +44,7 @@ export function FaqSection() {
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-16">
           
           {/* Left Column: Framed Farmer in Cornfield + Floating Golden Badge (5 Cols) */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-5 pb-6 lg:pb-0">
             <div className="relative mx-auto w-full max-w-[500px] lg:max-w-none">
               
               {/* Decorative Frame */}
@@ -71,7 +71,7 @@ export function FaqSection() {
                 </div>
 
                 {/* Floating Experience Badge */}
-                <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 z-10 flex w-[90%] max-w-[340px] items-center gap-3.5 rounded-3xl border-2 border-[#ffdb70] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-4.5 text-[#0c2415] shadow-[0_20px_45px_rgba(245,182,26,0.38)] transition-transform duration-300 hover:scale-105">
+                <div className="absolute -bottom-6 left-1/2 -translate-x-1/2 z-10 flex w-[90%] max-w-[340px] items-center gap-3.5 rounded-3xl border-2 border-[#ffdb70] bg-gradient-to-br from-[#f5b61a] to-[#e5a40a] p-4 text-[#0c2415] shadow-[0_20px_45px_rgba(245,182,26,0.38)] transition-transform duration-300 hover:scale-105">
                   <span className="grid size-12 shrink-0 place-items-center rounded-2xl bg-[#0c2415] text-[#f5b61a] shadow-md ring-2 ring-white/20">
                     <Award className="size-6.5" />
                   </span>

@@ -86,8 +86,8 @@
   --color-danger-soft: var(--danger-soft);
   --color-wa: var(--wa);
 
-  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-display: "Sora", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Plus Jakarta Sans", "Sora", "Manrope", ui-sans-serif, system-ui, sans-serif;
   --font-urdu: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", "Segoe UI", serif;
   --font-mono: "Courier New", ui-monospace, SFMono-Regular, monospace;
 
