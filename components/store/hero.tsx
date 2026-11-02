@@ -63,25 +63,25 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Feature Badges */}
-          <div className="mt-8 sm:mt-11 flex flex-wrap items-center gap-2.5 sm:gap-4 text-[11px] sm:text-xs font-semibold text-white/80">
-            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
-              <span className="grid size-4 place-items-center rounded-full bg-[#43a047] text-white">
-                <Check className="size-2.5" strokeWidth={3} />
+          {/* Feature Badges in 1 Line */}
+          <div className="mt-7 sm:mt-11 flex items-center gap-1.5 sm:gap-3.5 text-[10px] sm:text-xs font-semibold text-white/90 whitespace-nowrap overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden -mx-4 px-4 sm:mx-0 sm:px-0">
+            <span className="shrink-0 flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
+              <span className="grid size-3.5 sm:size-4 place-items-center rounded-full bg-[#43a047] text-white shrink-0">
+                <Check className="size-2 sm:size-2.5" strokeWidth={3} />
               </span>
-              100% Pure Desi Ghee
+              <span>100% Pure Desi Ghee</span>
             </span>
-            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
-              <span className="grid size-4 place-items-center rounded-full bg-[#43a047] text-white">
-                <Check className="size-2.5" strokeWidth={3} />
+            <span className="shrink-0 flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
+              <span className="grid size-3.5 sm:size-4 place-items-center rounded-full bg-[#43a047] text-white shrink-0">
+                <Check className="size-2 sm:size-2.5" strokeWidth={3} />
               </span>
-              Zero Adulteration
+              <span>Zero Adulteration</span>
             </span>
-            <span className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
-              <span className="grid size-4 place-items-center rounded-full bg-[#43a047] text-white">
-                <Check className="size-2.5" strokeWidth={3} />
+            <span className="shrink-0 flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 backdrop-blur-sm transition-all duration-300 hover:border-[#43a047]/50 hover:bg-white/10 hover:-translate-y-0.5">
+              <span className="grid size-3.5 sm:size-4 place-items-center rounded-full bg-[#43a047] text-white shrink-0">
+                <Check className="size-2 sm:size-2.5" strokeWidth={3} />
               </span>
-              Fresh Morning Delivery
+              <span>Fresh Morning Delivery</span>
             </span>
           </div>
         </div>
