@@ -173,7 +173,15 @@
 }
 
 .marquee-track {
-  animation: marquee 34s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: marquee var(--marquee-duration, 38s) linear infinite;
+  will-change: transform;
+}
+
+.marquee-track:hover,
+.marquee-track:active {
+  animation-play-state: paused;
 }
 
 @keyframes marquee {
