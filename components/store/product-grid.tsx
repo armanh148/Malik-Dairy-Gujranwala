@@ -43,7 +43,7 @@ export function ProductGrid() {
 
         <div
           key={filter}
-          className="animate-rise mt-8 sm:mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5"
+          className="animate-rise mt-6 sm:mt-10 grid grid-cols-2 gap-2.5 sm:gap-4 md:grid-cols-3 lg:grid-cols-5"
         >
           {visible.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
