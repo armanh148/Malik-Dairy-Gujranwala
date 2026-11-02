@@ -134,36 +134,39 @@ export function SiteFooter() {
             </div>
           </div>
 
-          {/* Col 2: Useful Links (2 cols) */}
-          <div className="lg:col-span-2">
-            <h4 className="font-display text-sm font-bold uppercase tracking-wider text-white">
-              Useful Links
-            </h4>
-            <ul className="mt-5 space-y-2.5 text-xs text-white/70">
-              {usefulLinks.map((item) => (
-                <li key={item.label}>
-                  <Link href={item.href} className="transition hover:text-[#f5b61a]">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Cols 2 & 3: Useful Links & Our Products in 1 Row on Mobile (2-Col Grid) */}
+          <div className="grid grid-cols-2 gap-6 sm:gap-8 md:col-span-1 lg:col-span-5 lg:grid-cols-5">
+            {/* Useful Links */}
+            <div className="lg:col-span-2">
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-white">
+                Useful Links
+              </h4>
+              <ul className="mt-4 sm:mt-5 space-y-2.5 text-xs text-white/70">
+                {usefulLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="transition hover:text-[#f5b61a]">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Col 3: Products (3 cols) */}
-          <div className="lg:col-span-3">
-            <h4 className="font-display text-sm font-bold uppercase tracking-wider text-white">
-              Our Products
-            </h4>
-            <ul className="mt-5 space-y-2.5 text-xs text-white/70">
-              {productLinks.map((item) => (
-                <li key={item.label}>
-                  <Link href={item.href} className="transition hover:text-[#f5b61a]">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            {/* Our Products */}
+            <div className="lg:col-span-3">
+              <h4 className="font-display text-sm font-bold uppercase tracking-wider text-white">
+                Our Products
+              </h4>
+              <ul className="mt-4 sm:mt-5 space-y-2.5 text-xs text-white/70">
+                {productLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="transition hover:text-[#f5b61a]">
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* Col 4: Newsletter (3 cols) */}
