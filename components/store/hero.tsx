@@ -40,26 +40,26 @@ export function Hero() {
             Malik Dairy delivers 100% natural organic dairy products &amp; pure farm fresh harvest straight from our pesticide-free pasture lands in Gujranwala.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="mt-7 sm:mt-9 flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5">
+          {/* CTA Buttons in 1 Row */}
+          <div className="mt-7 sm:mt-9 flex items-center gap-2.5 sm:gap-4">
             <Link
               href="/#services"
-              className="shimmer-btn group inline-flex justify-center items-center gap-2.5 rounded-full bg-[#43a047] px-7 py-3.5 sm:px-8 sm:py-4 text-sm font-bold text-white shadow-[0_10px_25px_-5px_rgba(67,160,71,0.5)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-1 active:scale-95"
+              className="shimmer-btn group inline-flex flex-1 sm:flex-initial justify-center items-center gap-1.5 sm:gap-2.5 rounded-full bg-[#43a047] px-4 py-3 sm:px-8 sm:py-4 text-xs sm:text-sm font-bold text-white shadow-[0_10px_25px_-5px_rgba(67,160,71,0.5)] transition-all duration-300 hover:bg-[#388e3c] hover:shadow-[0_18px_35px_-5px_rgba(67,160,71,0.7)] hover:-translate-y-1 active:scale-95 whitespace-nowrap"
             >
-              Discover More
-              <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1.5" />
+              <span>Discover More</span>
+              <ArrowRight className="size-3.5 sm:size-4 transition-transform duration-300 group-hover:translate-x-1.5 shrink-0" />
             </Link>
 
             <a
               href={whatsappLink(supportWhatsAppMessage())}
               target="_blank"
               rel="noreferrer"
-              className="group inline-flex justify-center items-center gap-3 rounded-full border border-white/30 bg-black/30 px-7 py-3.5 sm:py-4 text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-black/55 hover:border-white/60 hover:-translate-y-1 active:scale-95"
+              className="group inline-flex flex-1 sm:flex-initial justify-center items-center gap-2 sm:gap-3 rounded-full border border-white/30 bg-black/30 px-3.5 py-3 sm:px-7 sm:py-4 text-xs sm:text-sm font-semibold text-white backdrop-blur-md transition-all duration-300 hover:bg-black/55 hover:border-white/60 hover:-translate-y-1 active:scale-95 whitespace-nowrap"
             >
-              <span className="grid size-7 place-items-center rounded-full bg-white text-[#0a2315] shadow-sm transition-transform duration-300 group-hover:scale-110">
-                <Play className="ml-0.5 size-3 fill-[#0a2315]" />
+              <span className="grid size-6 sm:size-7 place-items-center rounded-full bg-white text-[#0a2315] shadow-sm transition-transform duration-300 group-hover:scale-110 shrink-0">
+                <Play className="ml-0.5 size-2.5 sm:size-3 fill-[#0a2315]" />
               </span>
-              Watch Our Story
+              <span>Watch Story</span>
             </a>
           </div>
 
